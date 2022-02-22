@@ -128,9 +128,8 @@ tput setaf 3  ; echo "Desktop Configurations Bugdie" ; tput sgr0
 # -------------------------------------------------------------------------------
 
 # sudo apt install dconf*
-# dconf dump / > full-desctop-backup
-# dconf load / < full-desctop-backup
-
+# dconf dump / > /extras/full-backup
+# dconf load / < /extras/full-backup
 
 # -------------------------------------------------------------------------------
 tput setaf 3  ; echo "Ultimos updates - Aguarde" ; tput sgr0
