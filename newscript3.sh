@@ -33,9 +33,22 @@ tput setaf 2  ; echo "Snap" ; tput sgr0
 sudo apt install snapd -y
 source ~/.bashrc 
 
+# install flatpak
+tput setaf 2  ; echo "Flatpak" ; tput sgr0
+sudo apt install flatpak -y
+source ~/.bashrc 
+
 # spotify
 tput setaf 2  ; echo "Spotify" ; tput sgr0
 sudo snap install spotify -y
+
+# notion
+tput setaf 2  ; echo "Notion" ; tput sgr0
+sudo snap install notion-snap -y
+
+# install gnome.Boxes
+tput setaf 2  ; echo "gnome.Boxes" ; tput sgr0
+flatpak install flathub org.gnome.Boxes -y
 
 # git
 tput setaf 2  ; echo "git" ; tput sgr0
