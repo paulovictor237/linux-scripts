@@ -74,6 +74,10 @@ sudo apt-get -y install gparted
 tput setaf 2  ; echo "timeshift" ; tput sgr0
 sudo apt-get -y install timeshift
 
+# emote
+tput setaf 2  ; echo "emote" ; tput sgr0
+sudo snap install emote
+
 # typora
 tput setaf 2  ; echo "Typora" ; tput sgr0
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
@@ -95,58 +99,6 @@ sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main' -y
 sudo apt update
 sudo apt install --install-recommends winehq-stable -y
-
-# -------------------------------------------------------------------------------
-tput setaf 3  ; echo "Instalacao via pacotes - Aguarde" ; tput sgr0
-# -------------------------------------------------------------------------------
-
-# code
-tput setaf 2  ; echo "VScode" ; tput sgr0
-sudo apt install ./linux-programs/code_1.64.2-1644445741_amd64.deb -y
-sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/master/vscode.nemo_action -O ~/.local/share/nemo/actions/vscode.nemo_action
-
-# gitkraken
-tput setaf 2  ; echo "Gitkraken" ; tput sgr0
-sudo apt install ./linux-programs/gitkraken-amd64.deb -y
-
-# steam
-tput setaf 2  ; echo "Steam" ; tput sgr0
-sudo apt install ./linux-programs/steam_latest.deb -y
-
-# chrome
-tput setaf 2  ; echo "Chrome" ; tput sgr0
-sudo apt install ./linux-programs/google-chrome-stable_current_amd64.deb -y
-
-# Edge
-tput setaf 2  ; echo "Edge" ; tput sgr0
-sudo apt install ./linux-programs/microsoft-edge-stable_98.0.1108.50-1_amd64.deb -y
-
-# insync
-tput setaf 2  ; echo "Insync" ; tput sgr0
-sudo apt install ./linux-programs/insync_3.7.1.50307-impish_amd64.deb -y
-
-# install stremio 
-tput setaf 2  ; echo "Stremio" ; tput sgr0
-wget http://mirrors.kernel.org/ubuntu/pool/multiverse/f/fdk-aac/libfdk-aac1_0.1.6-1_amd64.deb
-sudo apt install ./libfdk-aac1_*_amd64.deb -y
-sudo apt install ./linux-programs/stremio*amd64.deb -y
-sudo apt --fix-broken install
-
-# teams
-tput setaf 2  ; echo "Teams" ; tput sgr0
-sudo apt install ./linux-programs/teams_1.4.00.26453_amd64.deb -y
-
-# -------------------------------------------------------------------------------
-tput setaf 3  ; echo "Desktop Configurations Bugdie" ; tput sgr0
-# -------------------------------------------------------------------------------
-
-# sudo apt install dconf*
-# dconf dump / > /extras/full-backup
-# dconf load / < /extras/full-backup
-
-# -------------------------------------------------------------------------------
-tput setaf 3  ; echo "Ultimos updates - Aguarde" ; tput sgr0
-# -------------------------------------------------------------------------------
 
 # update
 tput setaf 2  ; echo "Update" ; tput sgr0
