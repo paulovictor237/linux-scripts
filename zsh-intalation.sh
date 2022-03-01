@@ -36,7 +36,8 @@ tput setaf 3  ; echo "Oh My Zsh" ; tput sgr0
 # Zsh
 tput setaf 2  ; echo "Zsh" ; tput sgr0
 sudo apt-get install zsh -y
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -n
+zsh
 
 # FiraCode
 tput setaf 2  ; echo "FiraCode" ; tput sgr0
@@ -55,7 +56,7 @@ source ~/.zshrc
 
 # Configurando Spaceship
 tput setaf 2  ; echo "Configurando Spaceship" ; tput sgr0
-cat /extras/zsh-extras.txt >> ~/.zshrc
+cat extras/zsh-extras.txt >> ~/.zshrc
 source ~/.zshrc
 
 # plugins
@@ -73,7 +74,7 @@ fc-cache -f -v
 
 # Dracula tilix theme 
 tput setaf 2  ; echo "Dracula tilix theme" ; tput sgr0
-cp /extras/Dracula.json ~/.config/tilix/schemes
+cp extras/Dracula.json ~/.config/tilix/schemes
 
 # -------------------------------------------------------------------------------
 tput setaf 3  ; echo "Ultimos updates - Aguarde" ; tput sgr0
@@ -85,7 +86,13 @@ sudo apt update
 sudo apt upgrade -y
 
 # -------------------------------------------------------------------------------
+tput setaf 3  ; echo "Definindo ZSH como padrao" ; tput sgr0
+# -------------------------------------------------------------------------------
+chsh -s $(which zsh)
+
+# -------------------------------------------------------------------------------
 tput setaf 3  ; echo "Instalacao Completa" ; tput sgr0
 # -------------------------------------------------------------------------------
 source ~/.zshrc
+
 exit 1
