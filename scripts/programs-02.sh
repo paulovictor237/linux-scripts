@@ -14,25 +14,26 @@ tput setaf 3  ; echo "Instalacao via pacotes - Aguarde" ; tput sgr0
 # -------------------------------------------------------------------------------
 
 # code
-tput setaf 2  ; echo "VScode" ; tput sgr0
-sudo apt install ./programs/code_1.64.2-1644445741_amd64.deb -y
+# tput setaf 2  ; echo "VScode" ; tput sgr0
+# sudo apt install ./programs/code_1.64.2-1644445741_amd64.deb -y
 
 # code
 tput setaf 2  ; echo "Ativa VScode como contexto" ; tput sgr0
-sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/master/vscode.nemo_action -O ~/.local/share/nemo/actions/vscode.nemo_action
+bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
+# sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/master/vscode.nemo_action -O ~/.local/share/nemo/actions/vscode.nemo_action
 
 # gitkraken
-tput setaf 2  ; echo "Gitkraken" ; tput sgr0
-sudo apt install ./programs/gitkraken-amd64.deb -y
+# tput setaf 2  ; echo "Gitkraken" ; tput sgr0
+# sudo apt install ./programs/gitkraken-amd64.deb -y
 
 # steam
 tput setaf 2  ; echo "Steam" ; tput sgr0
 sudo apt install ./programs/steam_latest.deb -y
 
 # chrome
-tput setaf 2  ; echo "Chrome" ; tput sgr0
-sudo apt install ./programs/google-chrome-stable_current_amd64.deb -y
-
+# tput setaf 2  ; echo "Chrome" ; tput sgr0
+# sudo apt install ./programs/google-chrome-stable_current_amd64.deb -y
+# 
 # Edge
 tput setaf 2  ; echo "Edge" ; tput sgr0
 sudo apt install ./programs/microsoft-edge-stable_98.0.1108.50-1_amd64.deb -y

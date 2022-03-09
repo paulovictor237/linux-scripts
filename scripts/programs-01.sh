@@ -29,9 +29,9 @@ sudo apt update
 sudo apt upgrade -y
 
 # install snap
-tput setaf 2  ; echo "Snap" ; tput sgr0
-sudo apt install snapd -y
-source ~/.bashrc 
+# tput setaf 2  ; echo "Snap" ; tput sgr0
+# sudo apt install snapd -y
+# source ~/.bashrc 
 
 # install flatpak
 tput setaf 2  ; echo "Flatpak" ; tput sgr0
@@ -42,23 +42,23 @@ source ~/.bashrc
 
 # spotify
 tput setaf 2  ; echo "Spotify" ; tput sgr0
-sudo snap install spotify -y
+sudo snap install spotify
 
 # notion
-tput setaf 2  ; echo "Notion" ; tput sgr0
-sudo snap install notion-snap -y
+# tput setaf 2  ; echo "Notion" ; tput sgr0
+# sudo snap install notion-snap -y
 
 # install gnome.Boxes
-tput setaf 2  ; echo "gnome.Boxes" ; tput sgr0
-flatpak install flathub org.gnome.Boxes -y
+# tput setaf 2  ; echo "gnome.Boxes" ; tput sgr0
+# flatpak install flathub org.gnome.Boxes -y
 
 # git
 tput setaf 2  ; echo "git" ; tput sgr0
-sudo apt install git
+sudo apt install git -y
 
 # install VLC
-tput setaf 2  ; echo "VLC" ; tput sgr0
-sudo apt install vlc -y
+# tput setaf 2  ; echo "VLC" ; tput sgr0
+# sudo apt install vlc -y
 
 # install transmition
 tput setaf 2  ; echo "Transmition" ; tput sgr0
@@ -73,12 +73,12 @@ tput setaf 2  ; echo "gparted" ; tput sgr0
 sudo apt-get -y install gparted
 
 # timeshift
-tput setaf 2  ; echo "timeshift" ; tput sgr0
-sudo apt-get -y install timeshift
+# tput setaf 2  ; echo "timeshift" ; tput sgr0
+# sudo apt-get -y install timeshift
 
 # emote
-tput setaf 2  ; echo "emote" ; tput sgr0
-sudo snap install emote
+# tput setaf 2  ; echo "emote" ; tput sgr0
+# sudo snap install emote
 
 # typora
 tput setaf 2  ; echo "Typora" ; tput sgr0
@@ -98,7 +98,7 @@ tput setaf 2  ; echo "Wine" ; tput sgr0
 sudo dpkg --add-architecture i386 
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ impish main' -y
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -y # 20.04
 sudo apt update
 sudo apt install --install-recommends winehq-stable -y
 
