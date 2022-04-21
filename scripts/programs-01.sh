@@ -29,20 +29,20 @@ sudo apt update
 sudo apt upgrade -y
 
 # install snap
-# tput setaf 2  ; echo "Snap" ; tput sgr0
-# sudo apt install snapd -y
-# source ~/.bashrc 
-
-# install flatpak
-tput setaf 2  ; echo "Flatpak" ; tput sgr0
-sudo apt install flatpak -y
-sudo apt install gnome-software-plugin-flatpak -y
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+tput setaf 2  ; echo "Snap" ; tput sgr0
+sudo apt install snapd -y
 source ~/.bashrc 
 
+# install flatpak
+# tput setaf 2  ; echo "Flatpak" ; tput sgr0
+# sudo apt install flatpak -y
+# sudo apt install gnome-software-plugin-flatpak -y
+# flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# source ~/.bashrc 
+
 # spotify
-tput setaf 2  ; echo "Spotify" ; tput sgr0
-sudo snap install spotify
+# tput setaf 2  ; echo "Spotify" ; tput sgr0
+# sudo snap install spotify
 
 # notion
 # tput setaf 2  ; echo "Notion" ; tput sgr0
@@ -57,8 +57,8 @@ tput setaf 2  ; echo "git" ; tput sgr0
 sudo apt install git -y
 
 # install VLC
-# tput setaf 2  ; echo "VLC" ; tput sgr0
-# sudo apt install vlc -y
+tput setaf 2  ; echo "VLC" ; tput sgr0
+sudo apt install vlc -y
 
 # install transmition
 tput setaf 2  ; echo "Transmition" ; tput sgr0
