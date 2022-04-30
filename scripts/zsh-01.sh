@@ -13,7 +13,7 @@ sudo apt install git
 # Zsh
 tput setaf 2  ; echo "Zsh" ; tput sgr0
 sudo apt-get install zsh -y
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -n
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # -------------------------------------------------------------------------------
 tput setaf 3  ; echo "Definindo ZSH como padrao" ; tput sgr0

@@ -29,17 +29,7 @@ fc-cache -f -v
 
 # plugins
 tput setaf 2  ; echo "spaceship theme" ; tput sgr0
-# sh -c "$(curl -fsSL https://git.io/zinit-install)"
-# zinit light zdharma/fast-syntax-highlighting
-# zinit light zsh-users/zsh-autosuggestions
-# zinit light zsh-users/zsh-completions
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-mkdir -p "$(dirname $ZINIT_HOME)"
-git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source "${ZINIT_HOME}/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 # source ~/.zshrc
 
 # Configurando Spaceship
@@ -48,12 +38,12 @@ cat scripts/extras/zsh-extras.txt >> ~/.zshrc
 # source ~/.zshrc
 
 # Dracula tilix theme 
-tput setaf 2  ; echo "Dracula tilix theme" ; tput sgr0
-# cp extras/Dracula.json ~/.config/tilix/schemes
-sudo apt-get install dconf-cli
-git clone https://github.com/dracula/gnome-terminal
-cd gnome-terminal
-./install.sh
+# tput setaf 2  ; echo "Dracula tilix theme" ; tput sgr0
+# # cp extras/Dracula.json ~/.config/tilix/schemes
+# sudo apt-get install dconf-cli
+# git clone https://github.com/dracula/gnome-terminal
+# cd gnome-terminal
+# ./install.sh
 ~
 # -------------------------------------------------------------------------------
 tput setaf 3  ; echo "Ultimos updates - Aguarde" ; tput sgr0
