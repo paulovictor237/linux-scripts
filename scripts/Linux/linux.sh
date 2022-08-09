@@ -19,10 +19,6 @@ cat .zshrc.config >> ~/.zshrc
 cp -R ttf ~/.local/share/fonts
 fc-cache -f -v
 
-# configure git
-git config --global user.email "paulovictor237@gmail.com"
-git config --global user.name "peve"
-
 # dracula theme gnome terminal
 sudo apt-get install dconf-cli
 cd ~/Downloads
