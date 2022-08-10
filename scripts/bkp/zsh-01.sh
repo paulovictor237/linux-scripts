@@ -25,4 +25,6 @@ tput setaf 3  ; echo "Instalacao Completa" ; tput sgr0
 # -------------------------------------------------------------------------------
 source ~/.zshrc
 
+/teste
+
 exit 1
