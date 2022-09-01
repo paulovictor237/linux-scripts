@@ -6,6 +6,9 @@
 sudo apt update
 sudo apt upgrade -y
 
+# neofetch
+sudo apt install neofetch -y
+
 # git
 sudo apt install git -y
 
