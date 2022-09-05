@@ -61,3 +61,4 @@ sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/mast
 # 5. Edge
 # 6. insync
 # 7. teams
+# 8. dbeaver-ce

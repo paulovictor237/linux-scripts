@@ -13,7 +13,10 @@ flatpak install flathub com.raggesilver.BlackBox
 flatpak install flathub com.rafaelmardojai.Blanket
 
 # gnome boxes
-flatpak install flathub org.gnome.Boxes -y
+flatpak install flathub org.gnome.Boxes
 
 # gcolor3
 flatpak install flathub nl.hjdskes.gcolor3
+
+# peek
+flatpak install flathub com.uploadedlobster.peek
