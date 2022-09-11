@@ -8,6 +8,7 @@ flatpak install flathub com.stremio.Stremio
 
 # black box
 flatpak install flathub com.raggesilver.BlackBox
+flatpak run com.raggesilver.BlackBox
 
 # blanket - white noise
 flatpak install flathub com.rafaelmardojai.Blanket
