@@ -4,6 +4,9 @@ sudo apt install snapd -y
 # spotify
 sudo snap install spotify
 
+# gitkraken
+sudo snap install gitkraken --classic
+
 # notion
 sudo snap install notion-snap -y
 

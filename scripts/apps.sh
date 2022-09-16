@@ -55,10 +55,9 @@ sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/mast
 # @@@ OUTSIDE INSTALL @@@
 
 # 1. code
-# 2. gitkraken
-# 3. steam
-# 4. chrome
-# 5. Edge
-# 6. insync
-# 7. teams
-# 8. dbeaver-ce
+# 2. steam
+# 3. chrome
+# 4. Edge
+# 5. insync
+# 5. teams
+# 7. dbeaver-ce
