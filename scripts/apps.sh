@@ -18,9 +18,6 @@ sudo apt install vlc -y
 # install transmition
 sudo apt-get install transmission -y
 
-# scrypy
-sudo apt install scrcpy -y
-
 # gparted
 sudo apt-get install gparted -y
 

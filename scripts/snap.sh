@@ -27,3 +27,7 @@ sudo snap install emote
 
 # sound switcher
 sudo snap install indicator-sound-switcher
+
+# scrcpy (mobile view)
+# sudo apt install scrcpy
+sudo snap install scrcpy
