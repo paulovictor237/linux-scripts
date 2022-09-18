@@ -6,6 +6,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # stremio
 flatpak install flathub com.stremio.Stremio
 
+# lutris
+flatpak install flathub net.lutris.Lutris
+
 # simplenote
 flatpak install flathub com.simplenote.Simplenote
 
