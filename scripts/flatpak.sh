@@ -6,6 +6,12 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # stremio
 flatpak install flathub com.stremio.Stremio
 
+# simplenote
+flatpak install flathub com.simplenote.Simplenote
+
+# bottles
+flatpak install flathub com.usebottles.bottles
+
 # black box
 flatpak install flathub com.raggesilver.BlackBox
 flatpak run com.raggesilver.BlackBox
