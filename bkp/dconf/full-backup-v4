@@ -1,0 +1,177 @@
+[apps/update-manager]
+first-run=false
+launch-count=15
+launch-time=int64 1663843623
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1662905320
+
+[com/uploadedlobster/peek]
+persist-window-geometry=(749, 111, 829, 879)
+recording-capture-mouse=true
+
+[org/gnome/control-center]
+last-panel='keyboard'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2022-09-22T14:58:15.912614Z'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri-dark='file:///home/peve/.local/share/backgrounds/2022-09-22-11-19-53-909641.png'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/input-sources]
+per-window=false
+sources=[('xkb', 'br'), ('xkb', 'us+alt-intl')]
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+gtk-theme='Yaru-dark'
+icon-theme='Yaru'
+toolkit-accessibility=false
+
+[org/gnome/desktop/notifications]
+application-children=['io-snapcraft-sessionagent', 'org-gnome-software', 'slack-slack']
+show-banners=true
+
+[org/gnome/desktop/notifications/application/io-snapcraft-sessionagent]
+application-id='io.snapcraft.SessionAgent.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/slack-slack]
+application-id='slack_slack.desktop'
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/peve/.local/share/backgrounds/2022-09-22-11-19-53-909641.png'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/wm/keybindings]
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-workspace-last=['<Super>semicolon']
+move-to-workspace-left=['<Shift><Super>Left']
+move-to-workspace-right=['<Shift><Super>Right']
+switch-to-workspace-left=['<Super>Left']
+switch-to-workspace-right=['<Super>Right']
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/gedit/preferences/editor]
+scheme='Yaru-dark'
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='small'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='list-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
+[org/gnome/settings-daemon/plugins/media-keys]
+terminal=['<Primary><Alt>t']
+
+[org/gnome/shell]
+app-picker-layout=[{'software-properties-drivers.desktop': <{'position': <0>}>, 'sol.desktop': <{'position': <1>}>, 'com.raggesilver.BlackBox.desktop': <{'position': <2>}>, 'com.rafaelmardojai.Blanket.desktop': <{'position': <3>}>, 'com.usebottles.bottles.desktop': <{'position': <4>}>, 'org.gnome.Calendar.desktop': <{'position': <5>}>, 'nl.hjdskes.gcolor3.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'org.gnome.gedit.desktop': <{'position': <9>}>, 'simple-scan.desktop': <{'position': <10>}>, 'dbeaver-ce.desktop': <{'position': <11>}>, 'gnome-system-monitor.desktop': <{'position': <12>}>, 'emote_emote.desktop': <{'position': <13>}>, 'org.gnome.Terminal.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'Fallout New Vegas.desktop': <{'position': <16>}>, 'yelp.desktop': <{'position': <17>}>, 'org.gnome.Nautilus.desktop': <{'position': <18>}>, 'org.gnome.Cheese.desktop': <{'position': <19>}>, 'firefox_firefox.desktop': <{'position': <20>}>, 'org.gnome.gitg.desktop': <{'position': <21>}>}, {'gitqlient.desktop': <{'position': <0>}>, 'com.github.Murmele.Gittyup.desktop': <{'position': <1>}>, 'chrome-fgcomclghjgfmdmapddgbendfcigkfha-Profile_3.desktop': <{'position': <2>}>, 'display-im6.q16.desktop': <{'position': <3>}>, 'input-remapper.desktop': <{'position': <4>}>, 'insomnia.desktop': <{'position': <5>}>, 'gnome-language-selector.desktop': <{'position': <6>}>, 'libreoffice-startcenter.desktop': <{'position': <7>}>, 'libreoffice-calc.desktop': <{'position': <8>}>, 'libreoffice-draw.desktop': <{'position': <9>}>, 'libreoffice-impress.desktop': <{'position': <10>}>, 'libreoffice-math.desktop': <{'position': <11>}>, 'libreoffice-writer.desktop': <{'position': <12>}>, 'net.lutris.Lutris.desktop': <{'position': <13>}>, 'org.gnome.Mahjongg.desktop': <{'position': <14>}>, 'microsoft-edge.desktop': <{'position': <15>}>, 'org.gnome.Mines.desktop': <{'position': <16>}>, 'chrome-nlnbkindebpgloklmoidfpbeblpckano-Profile_3.desktop': <{'position': <17>}>, 'com.obsproject.Studio.desktop': <{'position': <18>}>, 'chrome-ccipjfkfahbefihabbkeadkfilbfpnie-Profile_3.desktop': <{'position': <19>}>, 'com.uploadedlobster.peek.desktop': <{'position': <20>}>, 'pinta_pinta.desktop': <{'position': <21>}>}, {'chrome-glhjejmflhdjpaimbkdnhfpbbgdgjkoh-Profile_3.desktop': <{'position': <0>}>, 'postman_postman.desktop': <{'position': <1>}>, 'org.gnome.PowerStats.desktop': <{'position': <2>}>, 'org.remmina.Remmina.desktop': <{'position': <3>}>, 'rhythmbox.desktop': <{'position': <4>}>, 'scrcpy_scrcpy.desktop': <{'position': <5>}>, 'shotwell.desktop': <{'position': <6>}>, 'com.simplenote.Simplenote.desktop': <{'position': <7>}>, 'org.gnome.Software.desktop': <{'position': <8>}>, 'software-properties-gtk.desktop': <{'position': <9>}>, 'update-manager.desktop': <{'position': <10>}>, 'indicator-sound-switcher_indicator-sound-switcher.desktop': <{'position': <11>}>, 'spotify_spotify.desktop': <{'position': <12>}>, 'gnome-session-properties.desktop': <{'position': <13>}>, 'usb-creator-gtk.desktop': <{'position': <14>}>, 'steam.desktop': <{'position': <15>}>, 'com.stremio.Stremio.desktop': <{'position': <16>}>, 'sublime_merge.desktop': <{'position': <17>}>, 'org.gnome.Sudoku.desktop': <{'position': <18>}>, 'superproductivity_superproductivity.desktop': <{'position': <19>}>, 'thunderbird.desktop': <{'position': <20>}>, 'timeshift-gtk.desktop': <{'position': <21>}>}, {'org.gnome.Todo.desktop': <{'position': <0>}>, 'msedge-pagbofalnodgpajahjmliblclgmhbnjg-Default.desktop': <{'position': <1>}>, 'transmission-gtk.desktop': <{'position': <2>}>, 'snap-store_ubuntu-software.desktop': <{'position': <3>}>, 'vlc_vlc.desktop': <{'position': <4>}>, 'webstorm_webstorm.desktop': <{'position': <5>}>, 'Zettlr.desktop': <{'position': <6>}>}]
+disabled-extensions=['native-window-placement@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['sound-output-device-chooser@kgshank.net', 'clipboard-history@alexsaveau.dev', 'caffeine@patapon.info', 'forge@jmmaranan.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+favorite-apps=['chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_3.desktop', 'slack_slack.desktop', 'discord_discord.desktop', 'gitkraken_gitkraken.desktop', 'code.desktop', 'google-chrome.desktop']
+had-bluetooth-devices-setup=true
+welcome-dialog-last-shown-version='42.4'
+
+[org/gnome/shell/extensions/auto-move-windows]
+application-list=['chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Profile_3.desktop:1', 'slack_slack.desktop:1', 'discord_discord.desktop:1', 'gitkraken_gitkraken-url-handler.desktop:2', 'code.desktop:3', 'google-chrome.desktop:3', 'microsoft-edge.desktop:4']
+
+[org/gnome/shell/extensions/caffeine]
+user-enabled=false
+
+[org/gnome/shell/extensions/dash-to-dock]
+dash-max-icon-size=40
+isolate-monitors=true
+show-mounts=false
+show-trash=false
+
+[org/gnome/shell/extensions/forge]
+css-last-update=uint32 37
+tiling-mode-enabled=false
+
+[org/gnome/software]
+check-timestamp=int64 1663858685
+install-timestamp=int64 1663858415
+online-updates-timestamp=int64 1663858684
+update-notification-timestamp=int64 1663858746
+
+[org/gnome/terminal/legacy/profiles:]
+default='68fc9a7a-5959-42a2-b6cb-c96f2d453d4e'
+list=['68fc9a7a-5959-42a2-b6cb-c96f2d453d4e']
+
+[org/gnome/terminal/legacy/profiles:/:68fc9a7a-5959-42a2-b6cb-c96f2d453d4e]
+background-color='#282A36'
+bold-color='#6E46A4'
+bold-color-same-as-fg=false
+foreground-color='#F8F8F2'
+palette=['#262626', '#E356A7', '#42E66C', '#E4F34A', '#9B6BDF', '#E64747', '#75D7EC', '#EFA554', '#7A7A7A', '#FF79C6', '#50FA7B', '#F1FA8C', '#BD93F9', '#FF5555', '#8BE9FD', '#FFB86C']
+use-theme-colors=false
+visible-name='Default'
+
+[org/gtk/gtk4/settings/color-chooser]
+custom-colors=[(1.0, 0.96470588445663452, 0.42352941632270813, 1.0), (0.70588237047195435, 0.65490198135375977, 0.83921569585800171, 1.0), (0.9686274528503418, 0.63529413938522339, 0.16862745583057404, 1.0), (0.066666670143604279, 0.78039216995239258, 0.87843137979507446, 1.0), (0.92549020051956177, 0.36862745881080627, 0.36862745881080627, 1.0), (0.24705882370471954, 0.31764706969261169, 0.70980393886566162, 1.0)]
+selected-color=(true, 1.0, 0.96470588445663452, 0.42352941632270813, 1.0)
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=173
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-size=(1199, 852)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=185
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(695, 105)
+window-size=(1231, 805)
