@@ -30,3 +30,6 @@ flatpak install flathub nl.hjdskes.gcolor3
 
 # peek
 flatpak install flathub com.uploadedlobster.peek
+
+# handbrake
+flatpak install flathub fr.handbrake.ghb
