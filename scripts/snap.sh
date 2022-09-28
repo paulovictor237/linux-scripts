@@ -10,6 +10,12 @@ sudo snap install code --classic
 # postman
 sudo snap install postman
 
+# discord
+sudo snap install discord
+
+# slack
+sudo snap install slack
+
 # insomnia
 sudo snap install insomnia
 
