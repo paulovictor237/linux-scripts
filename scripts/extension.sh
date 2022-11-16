@@ -1,4 +1,5 @@
 # gnome extensions
+# sudo apt reinstall chrome-gnome-shell
 sudo apt install gnome-shell-extensions
 
 # gnome tweak-tool
