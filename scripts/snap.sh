@@ -22,6 +22,9 @@ sudo snap install insomnia
 # spotify
 sudo snap install spotify
 
+# soundcloud
+sudo snap install orange-app
+
 # gitkraken
 sudo snap install gitkraken --classic
 
