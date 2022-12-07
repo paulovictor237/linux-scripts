@@ -15,6 +15,9 @@ sudo apt install git -y
 # install VLC
 sudo apt install vlc -y
 
+# install tilix
+sudo apt install tilix -y
+
 # install transmition
 sudo apt-get install transmission -y
 
