@@ -25,3 +25,4 @@ SPACESHIP_CHAR_SUFFIX=" "
 # neofetch
 
 alias update="sudo apt update;sudo apt upgrade"
+alias myip="wget -qO- ifconfig.me"
