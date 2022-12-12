@@ -7,6 +7,9 @@ sudo snap install obs-studio
 # code
 sudo snap install code --classic
 
+# android-studio
+sudo snap install android-studio --classic
+
 # postman
 sudo snap install postman
 
