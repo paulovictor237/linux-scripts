@@ -16,6 +16,7 @@ sudo apt install git -y
 sudo apt install vlc -y
 
 # cool-retro-term
+# sudo apt install   -y # opcional
 sudo apt install cool-retro-term -y
 
 # install tilix
