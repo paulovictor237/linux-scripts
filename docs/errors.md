@@ -1,5 +1,16 @@
 # Errors
 
+# Reset GNOME Desktop Settings to Factory Default on Ubuntu
+
+Reset completo: `dconf reset -f /org/gnome/`
+
+Instalar dconf: `sudo apt update ; sudo apt install dconf-editor`
+
+```bash
+dconf dump / > full-backup # full backup
+dconf load / < full-backup # full restore
+```
+
 # Discord black screen
 
 [https://askubuntu.com/questions/1341208/screen-share-show-black-screen-after-upgrade-from-ubuntu-20-10-to-21-04](https://askubuntu.com/questions/1341208/screen-share-show-black-screen-after-upgrade-from-ubuntu-20-10-to-21-04)
@@ -27,21 +38,11 @@ wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubun
 sudo dpkg -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 ```
 
-# Reset GNOME Desktop Settings to Factory Default on Ubuntu
-
-Reset completo: `dconf reset -f /org/gnome/`
-
-Instalar dconf: `sudo apt update ; sudo apt install dconf-editor`
-
-```bash
-dconf dump / > full-backup # full backup
-dconf load / < full-backup # full restore
-```
-
 # Pulseaudio - trocar entre headphone e speakers
 
 - `alsamixer` + `PulseAudio Volume Control`
   To make it possible to switch between speakers and headphones, follow these steps:
+
   1. Run `alsamixer`.
   2. If necessary, select your sound card with .
 
@@ -58,11 +59,12 @@ dconf load / < full-backup # full restore
   5. Press  to exit.
 
      Esc
-  Or you can do all these steps with one command:
-  1. Open terminal
-  2. run `amixer -c 1 set 'Auto-Mute Mode' Disabled`
-  Now you can change between speakers and headphones in the PulseAudio Volume Control.
-  After applying these instructions you can make your life easier by using [Sound Switcher Indicator](https://github.com/yktoo/indicator-sound-switcher) to quickly switch between headphones and speakers.
+     Or you can do all these steps with one command:
+
+  6. Open terminal
+  7. run `amixer -c 1 set 'Auto-Mute Mode' Disabled`
+     Now you can change between speakers and headphones in the PulseAudio Volume Control.
+     After applying these instructions you can make your life easier by using [Sound Switcher Indicator](https://github.com/yktoo/indicator-sound-switcher) to quickly switch between headphones and speakers.
 
 # Dual monitor workspaces in Ubuntu 18.04
 

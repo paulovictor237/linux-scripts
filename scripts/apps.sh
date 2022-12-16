@@ -15,6 +15,9 @@ sudo apt install git -y
 # install VLC
 sudo apt install vlc -y
 
+# cool-retro-term
+sudo apt install cool-retro-term -y
+
 # install tilix
 sudo apt install tilix -y
 
@@ -29,12 +32,6 @@ sudo apt-get install timeshift -y
 
 # gufw
 sudo apt install gufw -y
-
-# typora
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository 'deb https://typora.io/linux ./' -y
-sudo apt update
-sudo apt-get install typora -y
 
 # install OBS
 sudo add-apt-repository ppa:obsproject/obs-studio -y
@@ -55,12 +52,3 @@ sudo apt install --install-recommends winehq-stable -y
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
 sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/master/vscode.nemo_action -O ~/.local/share/nemo/actions/vscode.nemo_action
 
-# @@@ OUTSIDE INSTALL @@@
-
-# 1. code
-# 2. steam
-# 3. chrome
-# 4. Edge
-# 5. insync
-# 5. teams
-# 7. dbeaver-ce
