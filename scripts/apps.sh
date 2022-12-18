@@ -34,6 +34,9 @@ sudo apt-get install timeshift -y
 # gufw
 sudo apt install gufw -y
 
+# input-remapper
+sudo apt install input-remapper -y
+
 # install OBS
 sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo apt update
