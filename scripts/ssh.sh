@@ -16,10 +16,10 @@ https://gist.github.com/klodshanz/3d2f34992e1a78c9876e3be2faf8aa8e
 ssh-add -D && rm -rf ~/.ssh  # limpa tudo e reseta o ssh
 
 # create SSH Keys
+ssh-keygen -t rsa -C "paulo@motoristapx.com.br"
+# /home/peve/.ssh/id_rsa
 ssh-keygen -t rsa -C "paulovictor237@gmail.com"
-/home/peve/.ssh/id_rsa
-ssh-keygen -t rsa -C "paulovictor237@gmail.com"
-/home/peve/.ssh/id_rsa_bb
+# /home/peve/.ssh/id_rsa_bb
 ls -a ~/.ssh 
 
 # add the identities to SSH
