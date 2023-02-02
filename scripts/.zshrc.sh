@@ -36,6 +36,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 alias docker-relaunch-project="UID=$(id -u) docker compose up"
 alias zsh-editor="code ~/.zshrc"
+alias node_modules_clear="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
