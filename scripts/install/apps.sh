@@ -37,11 +37,6 @@ sudo apt install gufw -y
 # input-remapper
 sudo apt install input-remapper -y
 
-# install OBS
-sudo add-apt-repository ppa:obsproject/obs-studio -y
-sudo apt update
-sudo apt-get install obs-studio -y
-
 # wine
 sudo dpkg --add-architecture i386 
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
