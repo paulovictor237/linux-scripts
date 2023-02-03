@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # @@@ COMMAND INSTALL @@@
 
 # update
@@ -12,40 +10,40 @@ sudo apt install neofetch -y
 # git
 sudo apt install git -y
 
+# curl
+sudo apt install curl -y
+
 # install VLC
 sudo apt install vlc -y
 
 # cool-retro-term
-# sudo apt install   -y # opcional
 sudo apt install cool-retro-term -y
-
-# install tilix
-sudo apt install tilix -y
 
 # install transmition
 sudo apt-get install transmission -y
 
-# gparted
-sudo apt-get install gparted -y
-
 # timeshift
 sudo apt-get install timeshift -y
 
+# gnome-shell-extensions
+sudo apt install gnome-shell-extensions -y
+
+# steam
+sudo add-apt-repository multiverse -y
+sudo apt update
+sudo apt install steam -y
+
+# install tilix
+# sudo apt install tilix -y
+
+# gparted
+# sudo apt-get install gparted -y
+
 # gufw
-sudo apt install gufw -y
+# sudo apt install gufw -y
 
 # input-remapper
-sudo apt install input-remapper -y
-
-# wine
-sudo dpkg --add-architecture i386 
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -y # 20.04
-sudo apt update
-sudo apt install --install-recommends winehq-stable -y
-
-# @@@ ADDONS INSTALL @@@
+# sudo apt install input-remapper -y
 
 # Ativa vscode como contexto
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"

@@ -3,40 +3,39 @@ sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# stremio
-flatpak install flathub com.stremio.Stremio\
+# edge
+flatpak install flathub -y --noninteractive com.microsoft.Edge 
 
-# steam
-flatpak install flathub com.valvesoftware.Steam
+# stremio
+flatpak install flathub -y --noninteractive com.stremio.Stremio
 
 # lutris
-flatpak install flathub net.lutris.Lutris
+flatpak install flathub -y --noninteractive net.lutris.Lutris
 
 # bottles
-flatpak install flathub com.usebottles.bottles
+flatpak install flathub -y --noninteractive com.usebottles.bottles
 
 # gnome boxes
-flatpak install flathub org.gnome.Boxes
+flatpak install flathub -y --noninteractive org.gnome.Boxes
 
 # gcolor3
-flatpak install flathub nl.hjdskes.gcolor3
+flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
 
 # peek
-flatpak install flathub com.uploadedlobster.peek
+flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 
 # handbrake
-flatpak install flathub fr.handbrake.ghb
-
-# ExtensionManager
-flatpak install flathub com.mattjakeman.ExtensionManager
-
-# blanket - white noise
-flatpak install flathub com.rafaelmardojai.Blanket
+flatpak install flathub -y --noninteractive fr.handbrake.ghb
 
 # black box
-flatpak install flathub com.raggesilver.BlackBox
-flatpak run com.raggesilver.BlackBox
+# flatpak install flathub -y --noninteractive com.raggesilver.BlackBox
+
+# blanket - white noise
+# flatpak install flathub -y --noninteractive com.rafaelmardojai.Blanket
+
+# ExtensionManager
+# flatpak install flathub -y --noninteractive com.mattjakeman.ExtensionManager
 
 # simplenote
-flatpak install flathub com.simplenote.Simplenote
+# flatpak install flathub -y --noninteractive com.simplenote.Simplenote
 
