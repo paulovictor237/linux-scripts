@@ -22,3 +22,8 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 alias update="sudo apt update;sudo apt upgrade"
 alias myip="wget -qO- ifconfig.me"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

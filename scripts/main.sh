@@ -5,13 +5,14 @@ echo "--------------- Iniciando instalação ---------------"
 # install
 cd install
 bash apps.sh
-bash extension.sh
-bash flatpak.sh
-bash snap.sh
-cd zsh
 bash dev.sh
+bash snap.sh
+bash flatpak.sh
+cd -
+
 # settings
-cd ../..
 cp settins/.XCompose ~/
+dconf load / < settins/full-bkp # full restore
 
 echo "--------------- Instalação completa ----------------"
+echo "--------------------- REBOOT -----------------------"

@@ -44,8 +44,3 @@ sudo apt install steam -y
 
 # input-remapper
 # sudo apt install input-remapper -y
-
-# Ativa vscode como contexto
-bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
-sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/master/vscode.nemo_action -O ~/.local/share/nemo/actions/vscode.nemo_action
-
