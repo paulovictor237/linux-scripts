@@ -19,3 +19,6 @@ sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
 sudo apt-get install openjdk-11-jdk -y
 java -version
+readlink -f $(which java)
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
