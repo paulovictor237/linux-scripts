@@ -9,6 +9,9 @@ flatpak install flathub -y --noninteractive com.microsoft.Edge
 # stremio
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 
+# desktop-files-creator
+flatpak install flathub com.github.alexkdeveloper.desktop-files-creator
+
 # lutris
 flatpak install flathub -y --noninteractive net.lutris.Lutris
 
