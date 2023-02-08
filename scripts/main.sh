@@ -3,15 +3,15 @@
 echo "--------------- Iniciando instalação ---------------"
 
 # install
-cd install
-bash apps.sh
-bash dev.sh
-bash snap.sh
-bash flatpak.sh
-cd -
+bash install/apps.sh
+bash install/dev.sh
+bash install/snap.sh
+bash install/flatpak.sh
+bash install/jetbrains.sh
+bash install/extension.sh
 
 # settings
-cp settins/.XCompose ~/
+cp assets/.XCompose ~/
 dconf load / < settins/full-bkp # full restore
 
 echo "--------------- Instalação completa ----------------"

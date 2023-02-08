@@ -1,17 +1,22 @@
+# =============================================================================
 # Git Configuration
+# =============================================================================
 git config --global user.name "peve"
 git config --global user.email "paulovictor237@gmail.com"
-
+# =============================================================================
 # @@@ Set up SSH for Git @@@
+# =============================================================================
 ssh-add -D && rm -rf ~/.ssh  # limpa tudo e reseta o ssh
 ssh-keygen # SSH Generator
 ssh-add ~/.ssh/id_rsa # Load your new identity into the ssh-agent
-more ~/.ssh/*.pub # (cat/tail -f)Show the key
+cat ~/.ssh/*.pub # more/cat -- (cat/tail -f)Show the key
 ssh -T git@bitbucket.org #  response YES
-
+# =============================================================================
 # @@@ MULTIPLE SSH KEYS @@@
-https://blog.developer.atlassian.com/different-ssh-keys-multiple-bitbucket-accounts/
-https://gist.github.com/klodshanz/3d2f34992e1a78c9876e3be2faf8aa8e
+# =============================================================================
+# https://blog.developer.atlassian.com/different-ssh-keys-multiple-bitbucket-accounts/
+# https://gist.github.com/klodshanz/3d2f34992e1a78c9876e3be2faf8aa8e
+
 # clean all
 ssh-add -D && rm -rf ~/.ssh  # limpa tudo e reseta o ssh
 
@@ -55,3 +60,5 @@ ssh -T bb
 
 # git clone git@gh:etikett_de/relaunch.git
 # git clone git@bb:etikett_de/relaunch.git
+
+# =============================================================================

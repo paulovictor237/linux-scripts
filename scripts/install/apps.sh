@@ -25,6 +25,9 @@ sudo apt-get install transmission -y
 # timeshift
 sudo apt-get install timeshift -y
 
+# gnome tweak-tool
+sudo apt install gnome-tweaks -y
+
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
