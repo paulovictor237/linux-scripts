@@ -10,6 +10,12 @@ sudo apt install neofetch -y
 # git
 sudo apt install git -y
 
+# folder-color
+sudo apt install folder-color -y
+
+# gnome-sushi
+sudo apt install gnome-sushi -y
+
 # curl
 sudo apt install curl -y
 
