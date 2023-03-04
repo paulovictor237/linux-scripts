@@ -9,6 +9,9 @@ flatpak install flathub -y --noninteractive com.microsoft.Edge
 # stremio
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 
+# obs
+flatpak install flathub com.obsproject.Studio
+
 # desktop-files-creator
 flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
 

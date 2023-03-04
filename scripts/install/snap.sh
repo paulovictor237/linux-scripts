@@ -1,9 +1,6 @@
 # snap
 sudo apt install snapd -y
 
-# obs-studio 
-sudo snap install obs-studio
-
 # code
 sudo snap install code --classic
 # Ativa vscode como contexto
