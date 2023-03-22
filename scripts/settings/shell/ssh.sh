@@ -8,9 +8,11 @@ git config --global user.email "paulovictor237@gmail.com"
 # =============================================================================
 ssh-add -D && rm -rf ~/.ssh  # limpa tudo e reseta o ssh
 ssh-keygen # SSH Generator
+eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa # Load your new identity into the ssh-agent
 cat ~/.ssh/*.pub # more/cat -- (cat/tail -f)Show the key
 ssh -T git@bitbucket.org #  response YES
+ssh -T git@github.com #  response YES
 # =============================================================================
 # @@@ MULTIPLE SSH KEYS @@@
 # =============================================================================
@@ -28,6 +30,7 @@ ssh-keygen -t rsa -C "paulovictor237@gmail.com"
 ls -a ~/.ssh 
 
 # add the identities to SSH
+eval `ssh-agent -s`
 ssh-add -D 
 ssh-add ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa_bb
