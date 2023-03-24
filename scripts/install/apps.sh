@@ -37,6 +37,9 @@ sudo apt install gnome-tweaks -y
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
+# 7zip
+sudo apt install p7zip-full -y
+
 # steam
 sudo add-apt-repository multiverse -y
 sudo apt update
