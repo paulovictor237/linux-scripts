@@ -1,7 +1,6 @@
 #!/bin/bash
 
-array=( 
-  https://extensions.gnome.org/extension/4839/clipboard-history/
+array=(
   https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
   https://extensions.gnome.org/extension/906/sound-output-device-chooser/
   https://extensions.gnome.org/extension/3933/toggle-night-light/

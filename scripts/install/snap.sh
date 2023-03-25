@@ -1,5 +1,5 @@
 # snap
-sudo apt install snapd -y
+# sudo apt install snapd -y
 
 # code
 sudo snap install code --classic
@@ -22,14 +22,14 @@ sudo snap install slack
 # postman
 sudo snap install postman
 
-# insomnia
-sudo snap install insomnia
-
 # spotify
 sudo snap install spotify
 
 # emote
 sudo snap install emote
+
+# insomnia
+# sudo snap install insomnia
 
 # sound switcher
 # sudo snap install indicator-sound-switcher

@@ -3,35 +3,35 @@ sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# edge
-flatpak install flathub -y --noninteractive com.microsoft.Edge 
-
 # stremio
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 
 # obs
-flatpak install flathub com.obsproject.Studio
+flatpak install flathub -y com.obsproject.Studio
 
 # desktop-files-creator
 flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
 
-# lutris
-flatpak install flathub -y --noninteractive net.lutris.Lutris
-
-# bottles
-flatpak install flathub -y --noninteractive com.usebottles.bottles
-
 # gnome boxes
 flatpak install flathub -y --noninteractive org.gnome.Boxes
-
-# gcolor3
-flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
 
 # peek
 flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 
+# edge
+# flatpak install flathub -y --noninteractive com.microsoft.Edge 
+
+# lutris
+# flatpak install flathub -y --noninteractive net.lutris.Lutris
+
+# bottles
+# flatpak install flathub -y --noninteractive com.usebottles.bottles
+
+# gcolor3
+# flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
+
 # handbrake
-flatpak install flathub -y --noninteractive fr.handbrake.ghb
+# flatpak install flathub -y --noninteractive fr.handbrake.ghb
 
 # black box
 # flatpak install flathub -y --noninteractive com.raggesilver.BlackBox

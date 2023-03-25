@@ -10,12 +10,6 @@ sudo apt install neofetch -y
 # git
 sudo apt install git -y
 
-# folder-color
-sudo apt install folder-color -y
-
-# gnome-sushi
-sudo apt install gnome-sushi -y
-
 # curl
 sudo apt install curl -y
 
@@ -31,12 +25,6 @@ sudo apt-get install transmission -y
 # timeshift
 sudo apt-get install timeshift -y
 
-# gnome tweak-tool
-sudo apt install gnome-tweaks -y
-
-# gnome-shell-extensions
-sudo apt install gnome-shell-extensions -y
-
 # 7zip
 sudo apt install p7zip-full -y
 
@@ -44,6 +32,18 @@ sudo apt install p7zip-full -y
 sudo add-apt-repository multiverse -y
 sudo apt update
 sudo apt install steam -y
+
+# gnome tweak-tool
+# sudo apt install gnome-tweaks -y
+
+# gnome-shell-extensions
+# sudo apt install gnome-shell-extensions -y
+
+# folder-color
+# sudo apt install folder-color -y
+
+# gnome-sushi
+# sudo apt install gnome-sushi -y
 
 # install tilix
 # sudo apt install tilix -y
