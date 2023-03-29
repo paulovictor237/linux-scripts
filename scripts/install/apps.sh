@@ -33,6 +33,9 @@ sudo add-apt-repository multiverse -y
 sudo apt update
 sudo apt install steam -y
 
+# gnome-sushi
+sudo apt install gnome-sushi -y
+
 # gnome tweak-tool
 # sudo apt install gnome-tweaks -y
 
@@ -41,9 +44,6 @@ sudo apt install steam -y
 
 # folder-color
 # sudo apt install folder-color -y
-
-# gnome-sushi
-# sudo apt install gnome-sushi -y
 
 # install tilix
 # sudo apt install tilix -y
