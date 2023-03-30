@@ -18,6 +18,9 @@ flatpak install flathub -y --noninteractive org.gnome.Boxes
 # peek
 flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 
+# beekeeper
+flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
+
 # edge
 # flatpak install flathub -y --noninteractive com.microsoft.Edge 
 
