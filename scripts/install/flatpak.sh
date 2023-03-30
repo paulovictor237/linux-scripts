@@ -7,7 +7,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 
 # obs
-flatpak install flathub -y com.obsproject.Studio
+flatpak install flathub -y --noninteractive com.obsproject.Studio
 
 # desktop-files-creator
 flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
