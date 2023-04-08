@@ -20,8 +20,13 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL="❯"
 # SPACESHIP_CHAR_SUFFIX=" "
 
+alias node_modules_remove="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
 alias update="sudo apt update;sudo apt upgrade"
 alias myip="wget -qO- ifconfig.me"
+
+function killport {
+  sudo kill -9 $(sudo lsof -t -i:$1)
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
