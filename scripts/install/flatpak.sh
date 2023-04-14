@@ -21,14 +21,11 @@ flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 # beekeeper
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 
-# edge
-# flatpak install flathub -y --noninteractive com.microsoft.Edge 
-
 # lutris
-# flatpak install flathub -y --noninteractive net.lutris.Lutris
+flatpak install flathub -y --noninteractive net.lutris.Lutris
 
 # bottles
-# flatpak install flathub -y --noninteractive com.usebottles.bottles
+flatpak install flathub -y --noninteractive com.usebottles.bottles
 
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3

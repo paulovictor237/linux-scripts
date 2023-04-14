@@ -1,5 +1,5 @@
 # snap
-# sudo apt install snapd -y
+sudo apt install snapd -y
 
 # code
 sudo snap install code --classic

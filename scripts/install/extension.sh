@@ -20,3 +20,6 @@ do
   gnome-extensions enable ${EXTENSION_ID}
   rm ${EXTENSION_ID}.zip
 done
+
+# pano
+sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0 -y

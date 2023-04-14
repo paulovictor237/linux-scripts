@@ -16,12 +16,6 @@ sudo apt install curl -y
 # install VLC
 sudo apt install vlc -y
 
-# cool-retro-term
-sudo apt install cool-retro-term -y
-
-# install transmition
-sudo apt-get install transmission -y
-
 # timeshift
 sudo apt-get install timeshift -y
 
@@ -36,11 +30,17 @@ sudo apt install steam -y
 # gnome-sushi
 sudo apt install gnome-sushi -y
 
+# gnome-shell-extensions
+sudo apt install gnome-shell-extensions -y
+
+# cool-retro-term
+# sudo apt install cool-retro-term -y
+
+# install transmition
+# sudo apt-get install transmission -y
+
 # gnome tweak-tool
 # sudo apt install gnome-tweaks -y
-
-# gnome-shell-extensions
-# sudo apt install gnome-shell-extensions -y
 
 # folder-color
 # sudo apt install folder-color -y
