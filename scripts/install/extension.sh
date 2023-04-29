@@ -6,6 +6,9 @@ array=(
   https://extensions.gnome.org/extension/3933/toggle-night-light/
   https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
   https://extensions.gnome.org/extension/5278/pano/
+  https://extensions.gnome.org/extension/4033/x11-gestures/
+  https://extensions.gnome.org/extension/4709/another-window-session-manager/
+  https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
 )
 
 for i in "${array[@]}"
@@ -23,3 +26,9 @@ done
 
 # pano
 sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0 -y
+
+# gesture
+sudo add-apt-repository ppa:touchegg/stable
+sudo apt install touchegg
+systemctl status touchegg
+
