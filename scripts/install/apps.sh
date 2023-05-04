@@ -33,6 +33,10 @@ sudo apt install gnome-sushi -y
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
+# ulauncher
+sudo add-apt-repository ppa:agornostal/ulauncher -y
+sudo apt install ulauncher -y
+
 # cool-retro-term
 # sudo apt install cool-retro-term -y
 
