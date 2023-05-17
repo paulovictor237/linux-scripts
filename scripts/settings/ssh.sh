@@ -11,7 +11,7 @@ ssh-add -D && rm -rf ~/.ssh  # limpa tudo e reseta o ssh
 ssh-keygen # SSH Generator
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa # Load your new identity into the ssh-agent
-cat ~/.ssh/*.pub # more/cat -- (cat/tail -f)Show the key
+cat  ~/.ssh/id_rsa.pub # more/cat -- (cat/tail -f)Show the key
 ssh -T git@bitbucket.org #  response YES
 ssh -T git@github.com #  response YES
 # =============================================================================
@@ -38,7 +38,7 @@ ssh-add ~/.ssh/id_rsa_bb
 ssh-add -l
 
 # Create Config file
-gnome-text-editor ~/.ssh/config
+code ~/.ssh/config
 #user1 account
 Host gh
 HostName bitbucket.org
