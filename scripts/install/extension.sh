@@ -10,7 +10,7 @@ array=(
   https://extensions.gnome.org/extension/4033/x11-gestures/
   https://extensions.gnome.org/extension/4709/another-window-session-manager/
   https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
-  https://extensions.gnome.org/extension/1162/emoji-selector/
+  # https://extensions.gnome.org/extension/1162/emoji-selector/
 )
 
 for i in "${array[@]}"
