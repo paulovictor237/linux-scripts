@@ -10,6 +10,10 @@ sudo apt install neofetch -y
 # git
 sudo apt install git -y
 
+# DaVinciResolve fix-bug
+# https://www.blackmagicdesign.com/br/products/davinciresolve/
+sudo apt install intel-opencl-icd -y
+
 # curl
 sudo apt install curl -y
 
