@@ -27,6 +27,9 @@ flatpak install flathub -y --noninteractive net.lutris.Lutris
 # bottles
 flatpak install flathub -y --noninteractive com.usebottles.bottles
 
+# heroic games
+flatpak install flathub com.heroicgameslauncher.hgl
+
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
 
