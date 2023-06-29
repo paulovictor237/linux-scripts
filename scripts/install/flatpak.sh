@@ -30,6 +30,9 @@ flatpak install flathub -y --noninteractive com.usebottles.bottles
 # heroic games
 flatpak install flathub com.heroicgameslauncher.hgl
 
+# flameshot
+flatpak install flathub org.flameshot.Flameshot
+
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
 
