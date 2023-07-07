@@ -10,10 +10,6 @@ sudo apt install neofetch -y
 # git
 sudo apt install git -y
 
-# DaVinciResolve fix-bug
-# https://www.blackmagicdesign.com/br/products/davinciresolve/
-sudo apt install intel-opencl-icd -y
-
 # curl
 sudo apt install curl -y
 
@@ -23,26 +19,26 @@ sudo apt install vlc -y
 # timeshift
 sudo apt-get install timeshift -y
 
-# 7zip
-sudo apt install p7zip-full -y
+# gnome-shell-extensions
+sudo apt install gnome-shell-extensions -y
 
 # steam
 sudo add-apt-repository multiverse -y
 sudo apt update
 sudo apt install steam -y
 
-# gnome-sushi
-sudo apt install gnome-sushi -y
+# cool-retro-term
+sudo apt install cool-retro-term -y
 
-# gnome-shell-extensions
-sudo apt install gnome-shell-extensions -y
+# 7zip
+# sudo apt install p7zip-full -y
+
+# gnome-sushi
+# sudo apt install gnome-sushi -y
 
 # ulauncher
-sudo add-apt-repository ppa:agornostal/ulauncher -y
-sudo apt install ulauncher -y
-
-# cool-retro-term
-# sudo apt install cool-retro-term -y
+# sudo add-apt-repository ppa:agornostal/ulauncher -y
+# sudo apt install ulauncher -y
 
 # install transmition
 # sudo apt-get install transmission -y
@@ -64,3 +60,7 @@ sudo apt install ulauncher -y
 
 # input-remapper
 # sudo apt install input-remapper -y
+
+# DaVinciResolve fix-bug
+# https://www.blackmagicdesign.com/br/products/davinciresolve/
+# sudo apt install intel-opencl-icd -y

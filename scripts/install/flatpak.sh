@@ -28,25 +28,25 @@ flatpak install flathub -y --noninteractive net.lutris.Lutris
 flatpak install flathub -y --noninteractive com.usebottles.bottles
 
 # heroic games
-flatpak install flathub com.heroicgameslauncher.hgl
+flatpak install flathub -y com.heroicgameslauncher.hgl
 
 # flameshot
-flatpak install flathub org.flameshot.Flameshot
+flatpak install flathub -y org.flameshot.Flameshot
+
+# ExtensionManager
+flatpak install flathub -y --noninteractive com.mattjakeman.ExtensionManager
+
+# handbrake
+flatpak install flathub -y --noninteractive fr.handbrake.ghb
 
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
-
-# handbrake
-# flatpak install flathub -y --noninteractive fr.handbrake.ghb
 
 # black box
 # flatpak install flathub -y --noninteractive com.raggesilver.BlackBox
 
 # blanket - white noise
 # flatpak install flathub -y --noninteractive com.rafaelmardojai.Blanket
-
-# ExtensionManager
-# flatpak install flathub -y --noninteractive com.mattjakeman.ExtensionManager
 
 # simplenote
 # flatpak install flathub -y --noninteractive com.simplenote.Simplenote

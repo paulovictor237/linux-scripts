@@ -3,7 +3,9 @@
 # =============================================================================
 git config --global user.name "peve"
 git config --global user.email "paulovictor237@gmail.com"
+# configure filemode
 git config --global core.filemode false
+git config core.fileMode false
 # =============================================================================
 # @@@ Set up SSH for Git @@@
 # =============================================================================
