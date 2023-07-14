@@ -6,9 +6,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # stremio
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 
-# obs
-flatpak install flathub -y --noninteractive com.obsproject.Studio
-
 # desktop-files-creator
 flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
 
@@ -38,6 +35,11 @@ flatpak install flathub -y --noninteractive com.mattjakeman.ExtensionManager
 
 # handbrake
 flatpak install flathub -y --noninteractive fr.handbrake.ghb
+
+# obs
+flatpak install flathub -y --noninteractive com.obsproject.Studio
+flatpak install flathub -y --noninteractive com.obsproject.Studio.Plugin.SceneSwitcher
+sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
 
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
