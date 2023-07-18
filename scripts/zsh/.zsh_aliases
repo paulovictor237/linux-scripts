@@ -1,0 +1,8 @@
+alias alias_list='cat ~/.zsh_aliases'
+alias node_modules_remove="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
+alias update="sudo apt update;sudo apt upgrade"
+alias myip="wget -qO- ifconfig.me"
+alias killport='f() { sudo kill -9 $(sudo lsof -t -i:$1) };f'
+
+alias auto-editor-file='f() { auto-editor $1 --export shotcut --margin 0.2sec --cut-out start,0.5sec };f'
+alias auto-editor-any="auto-editor *.mkv --export shotcut --margin 0.2sec --cut-out start,0.5sec"
