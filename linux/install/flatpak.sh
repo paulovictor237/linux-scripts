@@ -12,6 +12,9 @@ flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-fi
 # gnome boxes
 flatpak install flathub -y --noninteractive org.gnome.Boxes
 
+# touche
+flatpak install flathub com.github.joseexposito.touche
+
 # peek
 flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 
