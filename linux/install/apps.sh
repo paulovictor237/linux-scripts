@@ -13,6 +13,9 @@ sudo apt install git -y
 # curl
 sudo apt install curl -y
 
+# isync
+sudo apt-get install isync
+
 # install VLC
 sudo apt install vlc -y
 
