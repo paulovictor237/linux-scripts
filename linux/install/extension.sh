@@ -14,6 +14,7 @@ array=(
   https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/
   https://extensions.gnome.org/extension/4269/alphabetical-app-grid/
   https://extensions.gnome.org/extension/943/workspace-scroll/
+  https://extensions.gnome.org/extension/19/user-themes/
   # https://extensions.gnome.org/extension/2639/hide-minimized/
   # https://extensions.gnome.org/extension/5853/show-apps-at-top/
   # https://extensions.gnome.org/extension/4709/another-window-session-manager/

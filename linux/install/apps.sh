@@ -22,6 +22,9 @@ sudo apt install vlc -y
 # timeshift
 sudo apt-get install timeshift -y
 
+# gnome tweak-tool
+sudo apt install gnome-tweaks -y
+
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
@@ -45,9 +48,6 @@ sudo apt install cool-retro-term -y
 
 # install transmition
 # sudo apt-get install transmission -y
-
-# gnome tweak-tool
-# sudo apt install gnome-tweaks -y
 
 # folder-color
 # sudo apt install folder-color -y
