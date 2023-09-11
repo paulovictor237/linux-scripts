@@ -9,12 +9,13 @@ array=(
   https://extensions.gnome.org/extension/5278/pano/
   https://extensions.gnome.org/extension/4033/x11-gestures/
   https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
-  https://extensions.gnome.org/extension/2639/hide-minimized/
   https://extensions.gnome.org/extension/4506/simple-system-monitor/
-  https://extensions.gnome.org/extension/5853/show-apps-at-top/
-  https://extensions.gnome.org/extension/943/workspace-scroll/
-  https://extensions.gnome.org/extension/4269/alphabetical-app-grid/
   https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
+  https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/
+  https://extensions.gnome.org/extension/4269/alphabetical-app-grid/
+  https://extensions.gnome.org/extension/943/workspace-scroll/
+  # https://extensions.gnome.org/extension/2639/hide-minimized/
+  # https://extensions.gnome.org/extension/5853/show-apps-at-top/
   # https://extensions.gnome.org/extension/4709/another-window-session-manager/
   # https://extensions.gnome.org/extension/1162/emoji-selector/
 )
