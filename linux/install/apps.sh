@@ -28,11 +28,6 @@ sudo apt install gnome-tweaks -y
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
-# steam
-sudo add-apt-repository multiverse -y
-sudo apt update
-sudo apt install steam -y
-
 # cool-retro-term
 sudo apt install cool-retro-term -y
 
