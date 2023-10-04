@@ -21,6 +21,9 @@ flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 # beekeeper
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 
+# dbeaver
+flatpak install flathub y --noninteractive io.dbeaver.DBeaverCommunity
+
 # lutris
 flatpak install flathub -y --noninteractive net.lutris.Lutris
 
