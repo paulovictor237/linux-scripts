@@ -22,7 +22,7 @@ flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 
 # dbeaver
-flatpak install flathub y --noninteractive io.dbeaver.DBeaverCommunity
+# flatpak install flathub io.dbeaver.DBeaverCommunity
 
 # lutris
 flatpak install flathub -y --noninteractive net.lutris.Lutris
@@ -33,7 +33,7 @@ flatpak install flathub -y --noninteractive com.usebottles.bottles
 # heroic games
 flatpak install flathub -y com.heroicgameslauncher.hgl
 
-# flameshot
+# dshot
 flatpak install flathub -y org.flameshot.Flameshot
 
 # ExtensionManager
