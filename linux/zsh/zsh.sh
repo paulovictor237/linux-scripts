@@ -10,7 +10,6 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 
 # spaceship config
 cat .zshrc.sh >> ~/.zshrc
-cp .zsh_aliases ~/
 
 # spaceship
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
