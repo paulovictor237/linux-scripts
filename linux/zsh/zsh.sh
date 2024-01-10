@@ -14,8 +14,14 @@ cat .zshrc.sh >> ~/.zshrc
 # spaceship
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+# active theme
 code ~/.zshrc
+ZSH_THEME="spaceship"
 source ~/.zshrc
+
+# fonts-powerline
+sudo apt install fonts-powerline -y
 
 # dracula theme gnome terminal
 # sudo apt-get install dconf-cli

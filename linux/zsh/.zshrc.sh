@@ -3,23 +3,26 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
 SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  hg            # Mercurial section (hg_branch  + hg_status)
-  exec_time     # Execution time
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
+  python         # Python section
+  host           # Hostname section
+  user           # Username section
+  git            # Git section (git_branch + git_status)
+  dir            # Current directory section
+  hg             # Mercurial section (hg_branch  + hg_status)
+  exec_time      # Execution time
+  line_sep       # Line break
+  venv           # virtualenv section
+  jobs           # Background jobs indicator
+  exit_code      # Exit code section
+  char           # Prompt character
 )
 SPACESHIP_USER_SHOW=always
 SPACESHIP_HOST_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-# SPACESHIP_CHAR_SYMBOL="❯"
-# SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_ASYNC=false
+SPACESHIP_VENV_PREFIX="("
+SPACESHIP_VENV_SUFFIX=") "
+SPACESHIP_VENV_COLOR="#D84229"
 
 # python - pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -55,4 +58,4 @@ alias rn-build="yarn && yarn android && yarn start --reset-cache"
 alias auto-editor-file='f() { auto-editor $1 --export shotcut --margin 0.2sec --cut-out start,0.5sec };f'
 alias auto-editor-any="auto-editor *.mkv --export shotcut --margin 0.2sec --cut-out start,0.5sec"
 
-cd ~/Downloads
+
