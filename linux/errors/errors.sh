@@ -5,3 +5,6 @@ sudo systemctl restart gdm3
 
 # sudo apt reinstall chrome-gnome-shell
 sudo apt install gnome-shell-extensions -y
+
+# reinstall ubuntu desktop
+sudo apt install --reinstall ubuntu-desktop
