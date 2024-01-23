@@ -27,6 +27,7 @@ SPACESHIP_VENV_COLOR="#D84229"
 # python - pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 alias python="python3"
 
 # nvm
