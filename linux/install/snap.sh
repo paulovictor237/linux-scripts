@@ -5,7 +5,6 @@ sudo apt install snapd -y
 sudo snap install code --classic
 # Ativa vscode como contexto
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
-sudo wget https://raw.githubusercontent.com/mhsattarian/nemo-open-in-vscode/master/vscode.nemo_action -O ~/.local/share/nemo/actions/vscode.nemo_action
 
 # gitkraken
 sudo snap install gitkraken --classic

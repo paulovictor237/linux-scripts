@@ -3,6 +3,7 @@ sudo apt-get install zsh -y
 # chsh -s $(which zsh)
 
 # oh my zsh
+sudo apt install -y curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # plugins
