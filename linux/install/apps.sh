@@ -13,23 +13,23 @@ sudo apt install git -y
 # curl
 sudo apt install curl -y
 
-# isync
-sudo apt-get install isync
-
-# install VLC
-sudo apt install vlc -y
-
-# timeshift
-sudo apt-get install timeshift -y
-
-# gnome tweak-tool
-sudo apt install gnome-tweaks -y
-
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
+# install VLC
+# sudo apt install vlc -y
+
+# isync
+# sudo apt-get install isync
+
+# timeshift
+# sudo apt-get install timeshift -y
+
+# gnome tweak-tool
+# sudo apt install gnome-tweaks -y
+
 # cool-retro-term
-sudo apt install cool-retro-term -y
+# sudo apt install cool-retro-term -y
 
 # 7zip
 # sudo apt install p7zip-full -y

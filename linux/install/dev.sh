@@ -13,10 +13,11 @@ echo -ne "node: " && node -v && echo -ne "npm: " &&  npm -v && echo -ne "yarn: "
 cp assets/.huskyrc ~/
 
 # java
-sudo add-apt-repository ppa:openjdk-r/ppa -y
 sudo apt-get update
-sudo apt-get install openjdk-11-jdk -y
+# sudo apt-get install openjdk-11-jdk -y
+sudo apt-get install openjdk-17-jdk -y
 java -version
 readlink -f $(which java)
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64

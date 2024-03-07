@@ -6,15 +6,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # stremio
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 
-# desktop-files-creator
-flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
-
-# gnome boxes
-flatpak install flathub -y --noninteractive org.gnome.Boxes
-
-# touche
-flatpak install flathub com.github.joseexposito.touche
-
 # peek
 flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 
@@ -24,28 +15,37 @@ flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 # dbeaver
 flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 
-# lutris
-flatpak install flathub -y --noninteractive net.lutris.Lutris
-
-# bottles
-flatpak install flathub -y --noninteractive com.usebottles.bottles
-
-# heroic games
-flatpak install flathub -y com.heroicgameslauncher.hgl
-
 # dshot
 flatpak install flathub -y org.flameshot.Flameshot
 
+# desktop-files-creator
+# flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
+
+# gnome boxes
+# flatpak install flathub -y --noninteractive org.gnome.Boxes
+
+# touche
+# flatpak install flathub com.github.joseexposito.touche
+
+# lutris
+# flatpak install flathub -y --noninteractive net.lutris.Lutris
+
+# bottles
+# flatpak install flathub -y --noninteractive com.usebottles.bottles
+
+# heroic games
+# flatpak install flathub -y com.heroicgameslauncher.hgl
+
 # ExtensionManager
-flatpak install flathub -y --noninteractive com.mattjakeman.ExtensionManager
+# flatpak install flathub -y --noninteractive com.mattjakeman.ExtensionManager
 
 # handbrake
-flatpak install flathub -y --noninteractive fr.handbrake.ghb
+# flatpak install flathub -y --noninteractive fr.handbrake.ghb
 
 # obs
-flatpak install flathub -y --noninteractive com.obsproject.Studio
-flatpak install flathub -y --noninteractive com.obsproject.Studio.Plugin.SceneSwitcher
-sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
+# flatpak install flathub -y --noninteractive com.obsproject.Studio
+# flatpak install flathub -y --noninteractive com.obsproject.Studio.Plugin.SceneSwitcher
+# sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
 
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3

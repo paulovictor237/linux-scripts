@@ -1,20 +1,20 @@
 #!/bin/bash
 
 array=(
-  https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
-  https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-  https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
-  https://extensions.gnome.org/extension/3933/toggle-night-light/
-  https://extensions.gnome.org/extension/943/workspace-scroll/
-  https://extensions.gnome.org/extension/4033/x11-gestures/
-  https://extensions.gnome.org/extension/4506/simple-system-monitor/
   https://extensions.gnome.org/extension/5278/pano/
+  https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
+  # https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+  # https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
+  # https://extensions.gnome.org/extension/3933/toggle-night-light/
+  # https://extensions.gnome.org/extension/943/workspace-scroll/
+  # https://extensions.gnome.org/extension/4033/x11-gestures/
+  # https://extensions.gnome.org/extension/4506/simple-system-monitor/
 
-  https://extensions.gnome.org/extension/3193/blur-my-shell/
-  https://extensions.gnome.org/extension/2639/hide-minimized/
-  https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
-  https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/
-  https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
+  # https://extensions.gnome.org/extension/3193/blur-my-shell/
+  # https://extensions.gnome.org/extension/2639/hide-minimized/
+  # https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
+  # https://extensions.gnome.org/extension/3740/compiz-alike-magic-lamp-effect/
+  # https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
 
   # https://extensions.gnome.org/extension/19/user-themes/
   # https://extensions.gnome.org/extension/4269/alphabetical-app-grid/
@@ -40,7 +40,7 @@ done
 sudo apt install gir1.2-gda-5.0 gir1.2-gsound-1.0 -y
 
 # gesture
-sudo add-apt-repository ppa:touchegg/stable
-sudo apt install touchegg
-systemctl status touchegg
+# sudo add-apt-repository ppa:touchegg/stable
+# sudo apt install touchegg
+# systemctl status touchegg
 

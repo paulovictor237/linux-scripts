@@ -1,6 +1,6 @@
 # python
 
-sudo apt-get install \
+sudo apt-get install -y \
   make \
   libssl-dev\
   build-essential\
