@@ -1,7 +1,7 @@
 # install flatpak
 sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # stremio
 flatpak install flathub -y --noninteractive com.stremio.Stremio
@@ -16,7 +16,7 @@ flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 
 # dshot
-flatpak install flathub -y org.flameshot.Flameshot
+flatpak install flathub -y  --noninteractive org.flameshot.Flameshot
 
 # desktop-files-creator
 # flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator

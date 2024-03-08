@@ -6,9 +6,9 @@ array=(
   # https://extensions.gnome.org/extension/906/sound-output-device-chooser/
   # https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
   # https://extensions.gnome.org/extension/3933/toggle-night-light/
+  # https://extensions.gnome.org/extension/4506/simple-system-monitor/
   # https://extensions.gnome.org/extension/943/workspace-scroll/
   # https://extensions.gnome.org/extension/4033/x11-gestures/
-  # https://extensions.gnome.org/extension/4506/simple-system-monitor/
 
   # https://extensions.gnome.org/extension/3193/blur-my-shell/
   # https://extensions.gnome.org/extension/2639/hide-minimized/

@@ -10,7 +10,7 @@ npm install --global yarn
 echo -ne "node: " && node -v && echo -ne "npm: " &&  npm -v && echo -ne "yarn: " && yarn --version
 
 # huskyrc
-cp assets/.huskyrc ~/
+cp linux/assets/.huskyrc ~/
 
 # java
 sudo apt-get update

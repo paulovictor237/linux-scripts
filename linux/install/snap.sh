@@ -28,7 +28,7 @@ sudo snap install spotify
 sudo snap install emote
 
 # steam
-sudo snap install steam
+# sudo snap install steam
 
 # insomnia
 # sudo snap install insomnia
