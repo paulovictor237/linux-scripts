@@ -1,22 +1,6 @@
 # python
-
-sudo apt-get install -y \
-  make \
-  libssl-dev\
-  build-essential\
-  zlib1g-dev\
-  libbz2-dev\
-  libreadline-dev\
-  libsqlite3-dev\
-  wget\
-  llvm\
-  libncursesw5-dev\
-  xz-utils\
-  tk-dev\
-  libxml2-dev\
-  libxmlsec1-dev\
-  libffi-dev\
-  liblzma-dev
+sudo apt-get update
+sudo apt-get install -y libssl-dev libpq-dev python-dev
 
 curl https://pyenv.run | bash
 exec "$SHELL"
