@@ -21,3 +21,9 @@ readlink -f $(which java)
 
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+# Install Android Studio
+# Android Studio > Tools > SDK Manager > SDK tools > Android SDK Command-line Tools.
+# Android 14 (UpsideDownCake)
+# any device
+
