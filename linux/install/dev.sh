@@ -19,11 +19,15 @@ sudo apt-get install openjdk-17-jdk -y
 java -version
 readlink -f $(which java)
 
+# watchman
+sudo apt install watchman                         
+
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
 # Install Android Studio
 # Android Studio > Tools > SDK Manager > SDK tools > Android SDK Command-line Tools.
 # Android 14 (UpsideDownCake)
+# Intel x86 Atom_64 System Image or Google APIs Intel x86 Atom System Image
 # any device
 
