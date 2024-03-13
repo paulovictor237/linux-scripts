@@ -14,7 +14,7 @@ sudo apt install git -y
 sudo apt install curl -y
 
 # baobab disk usage analyzer
-sudo apt install baobab -y
+# sudo apt install baobab -y
 
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y

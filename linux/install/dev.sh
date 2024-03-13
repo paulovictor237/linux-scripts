@@ -20,7 +20,7 @@ java -version
 readlink -f $(which java)
 
 # watchman
-sudo apt install watchman                         
+sudo apt -y install watchman                         
 
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
@@ -31,3 +31,8 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # Intel x86 Atom_64 System Image or Google APIs Intel x86 Atom System Image
 # any device
 
+# open in firefox !!!
+# https://developer.android.com/studio/emulator_archive
+# stable emulator version (33.1.24)
+# emulator -list-avds
+# emulator @Pixel_4_API_33  
