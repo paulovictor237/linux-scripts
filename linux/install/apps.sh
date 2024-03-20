@@ -13,9 +13,6 @@ sudo apt install git -y
 # curl
 sudo apt install curl -y
 
-# baobab disk usage analyzer
-# sudo apt install baobab -y
-
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
@@ -33,6 +30,9 @@ sudo apt install gnome-shell-extensions -y
 
 # cool-retro-term
 # sudo apt install cool-retro-term -y
+
+# baobab disk usage analyzer
+# sudo apt install baobab -y
 
 # 7zip
 # sudo apt install p7zip-full -y
