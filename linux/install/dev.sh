@@ -1,13 +1,16 @@
 # node
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 exec "$SHELL"
-nvm install node 
 
-# yarn
-npm install --global yarn
+# install settings
+nvm install node v20
+nvm alias default v20
+nvm use 20
 
-# versions
-echo -ne "node: " && node -v && echo -ne "npm: " &&  npm -v && echo -ne "yarn: " && yarn --version
+# global packages
+npm install -g yarn appcenter-cli serverless
+# appcenter login
+# sls login
 
 # huskyrc
 cp linux/assets/.huskyrc ~/
