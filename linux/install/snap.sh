@@ -30,6 +30,9 @@ sudo snap install spotify
 # emote
 sudo snap install emote
 
+# obsidian
+sudo snap install obsidian --classic
+
 # steam
 # sudo snap install steam
 
