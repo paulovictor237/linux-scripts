@@ -39,3 +39,12 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # stable emulator version (33.1.24)
 # emulator -list-avds
 # emulator @Pixel_4_API_33  
+
+# rodar temporariamente o servidor no browser
+# npx -y flipper-server@0.195.0
+# instalar globalmente - necessario reiniciar o terminal
+npm i -g flipper-server@0.195.0
+# flipper-server
+# configure o SKD (Android SDK location)
+# /home/peve/Android/Sdk
+
