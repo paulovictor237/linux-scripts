@@ -3,9 +3,9 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 exec "$SHELL"
 
 # install settings
-nvm install node v20
-nvm alias default v20
-nvm use 20
+nvm install v20.12.2 
+nvm alias default v20.12.2
+nvm use v20.12.2
 
 # global packages
 npm install -g yarn appcenter-cli serverless

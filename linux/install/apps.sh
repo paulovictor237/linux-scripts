@@ -16,6 +16,9 @@ sudo apt install curl -y
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
 
+# install tilix
+sudo apt install tilix -y
+
 # install VLC
 # sudo apt install vlc -y
 
@@ -49,9 +52,6 @@ sudo apt install gnome-shell-extensions -y
 
 # folder-color
 # sudo apt install folder-color -y
-
-# install tilix
-# sudo apt install tilix -y
 
 # gparted
 # sudo apt-get install gparted -y

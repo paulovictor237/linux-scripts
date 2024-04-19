@@ -3,12 +3,12 @@
 array=(
   https://extensions.gnome.org/extension/5278/pano/
   https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
-  # https://extensions.gnome.org/extension/4033/x11-gestures/
-  # https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-  # https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
-  # https://extensions.gnome.org/extension/3933/toggle-night-light/
-  # https://extensions.gnome.org/extension/4506/simple-system-monitor/
-  # https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
+  https://extensions.gnome.org/extension/4033/x11-gestures/
+  https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+  https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
+  https://extensions.gnome.org/extension/3933/toggle-night-light/
+  https://extensions.gnome.org/extension/4506/simple-system-monitor/
+  https://extensions.gnome.org/extension/2857/maximize-to-workspace-with-history/
 
   # https://extensions.gnome.org/extension/943/workspace-scroll/
   # https://extensions.gnome.org/extension/3193/blur-my-shell/

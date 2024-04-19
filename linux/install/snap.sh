@@ -34,7 +34,7 @@ sudo snap install emote
 sudo snap install obsidian --classic
 
 # steam
-# sudo snap install steam
+sudo snap install steam
 
 # insomnia
 # sudo snap install insomnia
