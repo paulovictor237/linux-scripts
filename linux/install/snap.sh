@@ -13,7 +13,7 @@ sudo snap install gitkraken --classic
 sudo snap install android-studio --classic
 
 # discord
-# sudo snap install discord
+sudo snap install discord
 
 # microsoft teams
 sudo snap install teams-for-linux
