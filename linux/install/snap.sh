@@ -36,9 +36,6 @@ sudo snap install obsidian --classic
 # steam
 sudo snap install steam
 
-# gufw firewall
-sudo apt-get install gufw
-
 # insomnia
 # sudo snap install insomnia
 

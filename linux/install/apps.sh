@@ -19,14 +19,17 @@ sudo apt install gnome-shell-extensions -y
 # install tilix
 sudo apt install tilix -y
 
+# gufw firewall
+sudo apt install gufw -y
+
 # install VLC
 # sudo apt install vlc -y
 
 # isync
-# sudo apt-get install isync
+# sudo apt install isync
 
 # timeshift
-# sudo apt-get install timeshift -y
+# sudo apt install timeshift -y
 
 # gnome tweak-tool
 # sudo apt install gnome-tweaks -y
@@ -48,13 +51,13 @@ sudo apt install tilix -y
 # sudo apt install ulauncher -y
 
 # install transmition
-# sudo apt-get install transmission -y
+# sudo apt install transmission -y
 
 # folder-color
 # sudo apt install folder-color -y
 
 # gparted
-# sudo apt-get install gparted -y
+# sudo apt install gparted -y
 
 # gufw
 # sudo apt install gufw -y
