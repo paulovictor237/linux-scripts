@@ -28,6 +28,9 @@ sudo apt -y install watchman
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
+# fly
+curl -L https://fly.io/install.sh | sh
+
 # Install Android Studio
 # Android Studio > Tools > SDK Manager > SDK tools > Android SDK Command-line Tools.
 # Android 14 (UpsideDownCake)
