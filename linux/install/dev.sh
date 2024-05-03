@@ -31,6 +31,15 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 # fly
 curl -L https://fly.io/install.sh | sh
 
+# AWS
+cd ~/Downloads
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip -u awscliv2.zip
+sudo ./aws/install
+aws configure # IAM User Access Keys
+# us-east-1
+# json
+
 # Install Android Studio
 # Android Studio > Tools > SDK Manager > SDK tools > Android SDK Command-line Tools.
 # Android 14 (UpsideDownCake)
