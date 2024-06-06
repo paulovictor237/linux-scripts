@@ -50,7 +50,7 @@ alias foo='echo "$(hostname)@$(whoami):$PWD"'
 alias aliaslist='grep "^alias" ~/.zshrc | cut -d "=" -f 1 | cut -d " " -f 2'
 alias node_modules_remove="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
 alias update="sudo apt update;sudo apt upgrade"
-alias myip="wget -qO- ifconfig.me"
+alias myip="ip -4 addr | grep inet"
 alias killport='f() { sudo kill -9 $(sudo lsof -t -i:$1) };f'
 alias zshrc="code ~/.zshrc"
 
