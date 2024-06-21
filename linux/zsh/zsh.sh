@@ -19,6 +19,7 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 # active theme
 code ~/.zshrc
 ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 source ~/.zshrc
 
 # fonts-powerline

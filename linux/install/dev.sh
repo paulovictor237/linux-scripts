@@ -17,7 +17,6 @@ cp linux/assets/.huskyrc ~/
 
 # java
 sudo apt-get update
-# sudo apt-get install openjdk-11-jdk -y
 sudo apt-get install openjdk-17-jdk -y
 java -version
 readlink -f $(which java)
@@ -27,9 +26,6 @@ sudo apt -y install watchman
 
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-
-# fly
-curl -L https://fly.io/install.sh | sh
 
 # AWS
 cd ~/Downloads

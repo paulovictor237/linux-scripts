@@ -12,17 +12,8 @@ sudo snap install gitkraken --classic
 # android-studio
 sudo snap install android-studio --classic
 
-# discord
-sudo snap install discord
-
-# microsoft teams
-sudo snap install teams-for-linux
-
 # slack
 sudo snap install slack
-
-# postman
-sudo snap install postman
 
 # spotify
 sudo snap install spotify
@@ -33,11 +24,20 @@ sudo snap install emote
 # obsidian
 sudo snap install obsidian --classic
 
-# steam
-sudo snap install steam
+# bruno
+sudo snap install bruno
+
+# postman
+sudo snap install postman
 
 # insomnia
-# sudo snap install insomnia
+sudo snap install insomnia
+
+# steam
+# sudo snap install steam
+
+# discord
+# sudo snap install discord
 
 # sound switcher
 # sudo snap install indicator-sound-switcher
@@ -47,3 +47,6 @@ sudo snap install steam
 
 # notion
 # sudo snap install notion-snap
+
+# microsoft teams
+# sudo snap install teams-for-linux
