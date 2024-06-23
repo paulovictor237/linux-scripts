@@ -1,28 +1,40 @@
-zinit light zdharma/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
+# fish
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish -y
+chsh -s $(which fish)
 
-SPACESHIP_PROMPT_ORDER=(
-  python         # Python section
-  host           # Hostname section
-  user           # Username section
-  git            # Git section (git_branch + git_status)
-  dir            # Current directory section
-  hg             # Mercurial section (hg_branch  + hg_status)
-  exec_time      # Execution time
-  line_sep       # Line break
-  venv           # virtualenv section
-  jobs           # Background jobs indicator
-  exit_code      # Exit code section
-  char           # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_HOST_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_ASYNC=false
-SPACESHIP_VENV_PREFIX="("
-SPACESHIP_VENV_SUFFIX=") "
-SPACESHIP_VENV_COLOR="#D84229"
+# oh my fish
+curl -L https://get.oh-my.fish | fish
+omf update
+omf theme default
+omf install / omf theme
+# agnoster
+# bobthefish
+
+# johanson
+# simple-ass-prompt
+
+# fishface
+# fishbone
+# tomita
+ 
+$ omf install simple-ass-prompt
+fishface
+https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md
+
+# starship
+curl -sS https://starship.rs/install.sh | sh
+code ~/.config/fish/config.fish
+starship init fish | source
+
+# configure
+code ~/.config/fish/config.fish
+source ~/.config/fish/config.fish
+
+####################################
+#          FHSI SETTINGS           #
+####################################
 
 # python - pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -56,5 +68,6 @@ alias rn-build="yarn && yarn android && yarn start --reset-cache"
 
 alias auto-editor-file='f() { auto-editor $1 --export shotcut --margin 0.2sec --cut-out start,0.5sec };f'
 alias auto-editor-any="auto-editor *.mkv --export shotcut --margin 0.2sec --cut-out start,0.5sec"
+
 
 
