@@ -4,6 +4,9 @@
 sudo apt update
 sudo apt upgrade -y
 
+# fix 'ç' & 'Ç'
+cp ./linux/assets/.XCompose ~/
+
 # neofetch
 sudo apt install neofetch -y
 
@@ -12,6 +15,9 @@ sudo apt install git -y
 
 # curl
 sudo apt install curl -y
+
+# vim
+sudo apt install vim -y
 
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
