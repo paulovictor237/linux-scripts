@@ -18,6 +18,11 @@ flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 # dshot
 flatpak install flathub -y  --noninteractive org.flameshot.Flameshot
 
+# obs
+flatpak install flathub -y --noninteractive com.obsproject.Studio
+flatpak install flathub -y --noninteractive com.obsproject.Studio.Plugin.SceneSwitcher
+sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
+
 # desktop-files-creator
 # flatpak install flathub -y --noninteractive com.github.alexkdeveloper.desktop-files-creator
 
@@ -41,11 +46,6 @@ flatpak install flathub -y  --noninteractive org.flameshot.Flameshot
 
 # handbrake
 # flatpak install flathub -y --noninteractive fr.handbrake.ghb
-
-# obs
-# flatpak install flathub -y --noninteractive com.obsproject.Studio
-# flatpak install flathub -y --noninteractive com.obsproject.Studio.Plugin.SceneSwitcher
-# sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
 
 # gcolor3
 # flatpak install flathub -y --noninteractive nl.hjdskes.gcolor3
