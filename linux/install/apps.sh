@@ -4,9 +4,6 @@
 sudo apt update
 sudo apt upgrade -y
 
-# fix 'ç' & 'Ç'
-cp ./linux/assets/.XCompose ~/
-
 # neofetch
 sudo apt install neofetch -y
 

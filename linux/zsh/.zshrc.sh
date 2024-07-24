@@ -2,33 +2,11 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
-SPACESHIP_PROMPT_ORDER=(
-  python         # Python section
-  host           # Hostname section
-  user           # Username section
-  git            # Git section (git_branch + git_status)
-  dir            # Current directory section
-  hg             # Mercurial section (hg_branch  + hg_status)
-  exec_time      # Execution time
-  line_sep       # Line break
-  venv           # virtualenv section
-  jobs           # Background jobs indicator
-  exit_code      # Exit code section
-  char           # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_HOST_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_ASYNC=false
-SPACESHIP_VENV_PREFIX="("
-SPACESHIP_VENV_SUFFIX=") "
-SPACESHIP_VENV_COLOR="#D84229"
-
 # python - pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-alias python="python3"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# alias python="python3"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

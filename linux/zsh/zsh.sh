@@ -12,10 +12,6 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 # spaceship config
 cat ./linux/zsh/.zshrc.sh >> ~/.zshrc
 
-# spaceship
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
 # active theme
 code ~/.zshrc
 ZSH_THEME="spaceship"

@@ -1,0 +1,112 @@
+{
+  // @ SETTINGS
+  "terminal.integrated.env.linux": {
+    "GTK_PATH": ""
+  },
+  // @ LAYOUT
+  "color-highlight.useARGB": true,
+  "color-highlight.matchHslWithNoFunction": true,
+  "color-highlight.markerType": "dot-before",
+  "typescript.preferences.autoImportFileExcludePatterns": ["@radix-ui"],
+  // @ INTERFACE
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "symbols",
+  "workbench.editor.alwaysShowEditorActions": true,
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "window.titleBarStyle": "custom",
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "workbench.editor.labelFormat": "short",
+  // "workbench.editor.wrapTabs": true,
+  // "workbench.editor.tabSizing": "shrink",
+  // "window.commandCenter": false,
+  // "workbench.layoutControl.enabled": false,
+  // "window.menuBarVisibility": "compact",
+  // "symbols.hidesExplorerArrows": false,
+  "breadcrumbs.enabled": false,
+  // "workbench.activityBar.location": "hidden", // ctrl + q
+  // @ ON SAVE
+  // "files.autoSave": "onWindowChange",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.autoIndent": "brackets",
+  "editor.autoSurround": "brackets",
+  "editor.scrollBeyondLastLine": false,
+  "editor.accessibilitySupport": "off",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    // "source.fixAll.eslint": "explicit",
+    "source.removeUnusedImports": "explicit"
+  },
+  // @ FONTES
+  "files.eol": "\n",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.semanticHighlighting.enabled": false,
+  // "editor.lineHeight": 1.8,
+  "editor.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [80, 120],
+  // @ TODO
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/**"],
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.highlights.useColourScheme": true,
+  "workbench.colorCustomizations": {
+    "inlineparameters.annotationForeground": "#F9FAF8",
+    "inlineparameters.annotationBackground": "#7D7AA3"
+  },
+  // @ turboConsoleLog
+  "turboConsoleLog.includeFileNameAndLineNum": false,
+  "turboConsoleLog.insertEnclosingClass": false,
+  "turboConsoleLog.insertEnclosingFunction": false,
+  "turboConsoleLog.logMessagePrefix": "🐞",
+  // @ Markdown
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
+  // @ tailwind
+  "tailwindCSS.classAttributes": [".*ClassName*", ".*className.*"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  // @ Prettier
+  "prettier.singleQuote": true,
+  // @ EMULATOR
+  "emulator.emulatorPathLinux": "~/Android/Sdk/emulator",
+  // @ Sticky Scroll
+  "workbench.tree.enableStickyScroll": true,
+  "editor.stickyScroll.enabled": true,
+  // "terminal.integrated.stickyScroll.enabled": true,
+  "notebook.stickyScroll.enabled": true,
+  // @ project-folder
+  "projectManager.sortList": "Name",
+  "projectManager.git.baseFolders": ["/home/peve/Documents/"],
+  "projectManager.git.ignoredFolders": ["typings"],
+  // @ GIT
+  "gitlens.codeLens.enabled": false,
+  "gitlens.views.commitDetails.files.layout": "list",
+  "gitlens.views.branches.branches.layout": "list",
+  "gitlens.hovers.currentLine.over": "line",
+  // @ OUTROS
+  "codeium.enableCodeLens": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown-preview-github-styles.colorTheme": "dark",
+  "markdown.experimental.updateLinksOnPaste": true,
+  "git.autofetch": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "security.workspace.trust.untrustedFiles": "open",
+  "svg.preview.mode": "svg",
+  "terminal.integrated.env.osx": {},
+  "cSpell.userWords": ["Immer", "Zustand"],
+  "terminal.integrated.env.windows": {},
+  "symbols.hidesExplorerArrows": false,
+  "diffEditor.renderSideBySide": true,
+  "accessibility.underlineLinks": true
+}
