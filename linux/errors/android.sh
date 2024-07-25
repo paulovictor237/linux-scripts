@@ -11,7 +11,7 @@
 # emulator @Pixel_4_API_33
 
 # https://redirector.gvt1.com/edgedl/android/repository/emulator-linux_x64-11237101.zip
-# /home/peve/Android/Sdk/$HOME/Android/Sdk
+# /home/peve/Android/Sdk
 # crie uma cópia da pasta emulator
 # Descompacte o arquivo ZIP do emulador transferido por download. Mova o conteúdo para o diretório de instalação do SDK.
 # Cole o arquivo package.xml do diretório emulator_original no novo diretório emulator.
