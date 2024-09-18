@@ -1,16 +1,9 @@
 # zsh
-sudo apt-get install zsh -y
-# chsh -s $(which zsh)
-
-# oh my zsh
-sudo apt install -y curl
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# plugins
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-
-# spaceship config
+sudo apt install zsh -y
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+yes | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 cat ./linux/zsh/.zshrc.sh >> ~/.zshrc
+zsh
 
 # active theme
 code ~/.zshrc
@@ -20,11 +13,3 @@ source ~/.zshrc
 
 # fonts-powerline
 sudo apt install fonts-powerline -y
-
-# dracula theme gnome terminal
-# sudo apt-get install dconf-cli
-# cd ~/Downloads
-# git clone https://github.com/dracula/gnome-terminal
-# cd gnome-terminal
-# ./install.sh
-
