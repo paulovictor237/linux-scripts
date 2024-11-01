@@ -98,7 +98,11 @@ cp ./linux/assets/.XCompose ~/
 unzip ./linux/assets/ttf.zip -d /tmp
 mkdir ~/.local/share/fonts
 cp -R /tmp/ttf/* ~/.local/share/fonts
-fc-cache -f -v
+sudo fc-cache -f -v
+
+# excalifont
+cp ./linux/assets/excalifont.ttf ~/.local/share/fonts
+sudo fc-cache -f -v
 
 # react native
 sudo apt-get update
