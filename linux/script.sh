@@ -13,7 +13,6 @@ zsh
 
 # node
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
-pyenv global 3.10 # exec "$SHELL"
 nvm install v20.12.2 
 nvm alias default v20.12.2
 nvm use v20.12.2
@@ -26,7 +25,6 @@ sudo apt-get install -y build-essential zlib1g-dev libffi-dev libssl-dev liblzma
 curl https://pyenv.run | bash
 pyenv global 3.10
 pyenv install 3.10
-pyenv global 3.10
 pip install --upgrade pip
 pip install pipenv
 pyenv versions
@@ -62,7 +60,9 @@ cat  ~/.ssh/id_rsa.pub # Show the key
 
 # snap
 sudo apt install snapd -y
-sudo snap install code android-studio obsidian --classic
+sudo snap install code --classic
+sudo snap install android-studio --classic
+sudo snap install obsidian --classic
 sudo snap install slack spotify emote bruno postman insomnia
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
 
