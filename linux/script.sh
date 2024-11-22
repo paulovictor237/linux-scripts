@@ -10,9 +10,11 @@ yes | bash -c "$(curl --fail --show-error --silent --location https://raw.github
 cat ./linux/assets/.zshrc.sh >> ~/.zshrc
 chsh -s $(which zsh)
 zsh
+source ~/.zshrc 
 
 # node
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.zshrc 
 nvm install v20.12.2 
 nvm alias default v20.12.2
 nvm use v20.12.2
@@ -20,19 +22,20 @@ npm i -g yarn bun
 nvm list       
 
 # python
-sudo apt-get update
-sudo apt-get install -y build-essential zlib1g-dev libffi-dev libssl-dev liblzma-dev libbz2-dev libreadline-dev libsqlite3-dev
-curl https://pyenv.run | bash
-pyenv global 3.10
+sudo apt update
+sudo apt install -y build-essential zlib1g-dev libffi-dev libssl-dev liblzma-dev libbz2-dev libreadline-dev libsqlite3-dev
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 pyenv install 3.10
+pyenv shell 3.10.0
+pyenv global 3.10
 pip install --upgrade pip
 pip install pipenv
 pyenv versions
 
 # docker
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
-sudo apt-get update
-sudo apt-get install ca-certificates curl
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove $pkg; done
+sudo apt update
+sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -40,7 +43,7 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
+sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -63,14 +66,14 @@ sudo apt install snapd -y
 sudo snap install code --classic
 sudo snap install android-studio --classic
 sudo snap install obsidian --classic
-sudo snap install slack spotify emote bruno postman insomnia
+sudo snap install slack spotify emote bruno postman insomnia 
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
 
 # install flatpak
 sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.jetpackduba.Gitnuro
+flatpak install flathub -y --noninteractive com.jetpackduba.Gitnuro
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
@@ -105,8 +108,8 @@ cp ./linux/assets/excalifont.ttf ~/.local/share/fonts
 sudo fc-cache -f -v
 
 # react native
-sudo apt-get update
-sudo apt-get install openjdk-17-jdk -y
+sudo apt update
+sudo apt install openjdk-17-jdk -y
 readlink -f $(which java)      
 npm i -g flipper-server@0.195.0 appcenter-cli 
 sudo apt install watchman -y
