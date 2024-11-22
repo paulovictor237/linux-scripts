@@ -56,6 +56,8 @@ ssh-keygen -t rsa -b 4096 -C "paulovictor237@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 cat  ~/.ssh/id_rsa.pub # Show the key
+ssh -T git@github.com #  response YES
+ssh -T git@bitbucket.org #  response YES
 
 ################################################
 #             DESKTOP APPLICATIONS             #
