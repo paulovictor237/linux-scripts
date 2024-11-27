@@ -63,6 +63,22 @@ ssh -T git@bitbucket.org #  response YES
 #             DESKTOP APPLICATIONS             #
 ################################################
 
+# chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+# edge
+sudo apt install microsoft-edge-stable=130.0.2849.80-1
+sudo apt-mark hold microsoft-edge-stable
+
+# warp-terminal
+sudo apt-get install wget gpg
+wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+rm warpdotdev.gpg
+sudo apt update && sudo apt install warp-terminal
+
 # snap
 sudo apt install snapd -y
 sudo snap install code --classic
