@@ -23,7 +23,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias foo='echo "$(hostname)@$(whoami):$PWD"'
 alias aliaslist='grep "^alias" ~/.zshrc | cut -d "=" -f 1 | cut -d " " -f 2'
 alias node_modules_remove="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
-alias update="sudo apt update;sudo apt upgrade"
+alias update="sudo apt-get update && sudo apt-get upgrade -y"
 alias myip="ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias killport='f() { sudo kill -9 $(sudo lsof -t -i:$1) };f'
 alias zshrc="code ~/.zshrc"
