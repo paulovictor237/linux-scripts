@@ -121,10 +121,6 @@ mkdir ~/.local/share/fonts
 cp -R /tmp/ttf/* ~/.local/share/fonts
 sudo fc-cache -f -v
 
-# excalifont
-cp ./linux/assets/excalifont.ttf ~/.local/share/fonts
-sudo fc-cache -f -v
-
 # react native
 sudo apt update
 sudo apt install openjdk-17-jdk -y
@@ -145,7 +141,9 @@ sudo apt update
 sudo apt install -y touchegg
 systemctl status touchegg
 
-
-
+# Em caso de bugs [ Disable Wayland, active only X11 (Xorg) ]
+code /etc/gdm3/custom.conf
+WaylandEnable=false #Uncomment the line
+sudo systemctl restart gdm3 # will restart the system
 
 
