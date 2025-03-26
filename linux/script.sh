@@ -1,7 +1,8 @@
 # update
 sudo apt update
 sudo apt upgrade -y
-sudo apt install neofetch git curl -y      
+sudo apt install neofetch git curl -y   
+neofetch ## show your system information   
 
 # zsh
 sudo apt install zsh -y
@@ -49,13 +50,15 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo docker run hello-world
 
-# git
+# git and ssh configuration
 git config --global user.name "peve"
 git config --global user.email "paulovictor237@gmail.com"
 ssh-keygen -t rsa -b 4096 -C "paulovictor237@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
+# show your ssh key, paste on github or bitbucket
 cat  ~/.ssh/id_rsa.pub # Show the key
+# enable remote ssh after active the key 
 ssh -T git@github.com #  response YES
 ssh -T git@bitbucket.org #  response YES
 
@@ -71,15 +74,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt install microsoft-edge-stable=130.0.2849.80-1
 sudo apt-mark hold microsoft-edge-stable
 
-# warp-terminal
-sudo apt-get install wget gpg
-wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
-sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
-rm warpdotdev.gpg
-sudo apt update && sudo apt install warp-terminal
-
-# snap
+# snap packages
 sudo apt install snapd -y
 sudo snap install code --classic
 sudo snap install android-studio --classic
@@ -98,11 +93,19 @@ flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 flatpak install flathub -y --noninteractive org.flameshot.Flameshot
 
-# obs
+# install obs
 sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
 flatpak install flathub -y --noninteractive com.obsproject.Studio
 
-# swap
+# install warp-terminal
+sudo apt-get install wget gpg
+wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+rm warpdotdev.gpg
+sudo apt update && sudo apt install warp-terminal
+
+# swap expand 19G
 free -m
 sudo swapon --show
 sudo fallocate -l 19G /swapfile
@@ -115,7 +118,7 @@ echo '/swapfile none  swap sw 0 0' | sudo tee -a /etc/fstab
 # fix 'ç' & 'Ç' in international keyboard
 cp ./linux/assets/.XCompose ~/
 
-# jetbrains mono 
+# jetbrains mono font
 unzip ./linux/assets/ttf.zip -d /tmp
 mkdir ~/.local/share/fonts
 cp -R /tmp/ttf/* ~/.local/share/fonts
@@ -135,15 +138,15 @@ https://extensions.gnome.org/extension/779/clipboard-indicator/
 https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
 https://extensions.gnome.org/extension/4033/x11-gestures/
 
-# gesture
-sudo add-apt-repository ppa:touchegg/stable
-sudo apt update
-sudo apt install -y touchegg
-systemctl status touchegg
-
 # Em caso de bugs [ Disable Wayland, active only X11 (Xorg) ]
 code /etc/gdm3/custom.conf
 WaylandEnable=false #Uncomment the line
 sudo systemctl restart gdm3 # will restart the system
+
+# gesture for X11
+sudo add-apt-repository ppa:touchegg/stable
+sudo apt update
+sudo apt install -y touchegg
+systemctl status touchegg
 
 
