@@ -13,25 +13,33 @@ chsh -s $(which zsh)
 zsh
 source ~/.zshrc 
 
-# node
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-source ~/.zshrc 
-nvm install v20.12.2 
-nvm alias default v20.12.2
-nvm use v20.12.2
-npm i -g yarn bun
-nvm list       
+# Clonar o repositório do asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
 
-# python
-sudo apt update
-sudo apt install -y build-essential zlib1g-dev libffi-dev libssl-dev liblzma-dev libbz2-dev libreadline-dev libsqlite3-dev
-curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-pyenv install 3.10
-pyenv shell 3.10.0
-pyenv global 3.10
-pip install --upgrade pip
-pip install pipenv
-pyenv versions
+# Adicionar asdf ao zshrc
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+source ~/.zshrc
+
+# Instalar plugin e versão do Node.js
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs 20.0.0
+asdf global nodejs 20.0.0
+
+# Instalar plugin e versão do Python
+asdf plugin-add python https://github.com/danhper/asdf-python.git
+asdf install python 3.10.0
+asdf global python 3.10.0
+
+# Instalar plugin e versão do PHP
+asdf plugin-add php https://github.com/asdf-community/asdf-php.git
+asdf install php 8.1.0
+asdf global php 8.1.0
+
+# Instalar plugin e versão do Go
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install golang 1.20.0
+asdf global golang 1.20.0
 
 # docker
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove $pkg; done
