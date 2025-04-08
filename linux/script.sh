@@ -8,7 +8,7 @@ neofetch ## show your system information
 sudo apt install zsh -y
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yes | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-cat ./linux/assets/.zshrc.sh >> ~/.zshrc
+cat .zshrc.sh >> ~/.zshrc
 chsh -s $(which zsh)
 zsh
 source ~/.zshrc 
@@ -124,7 +124,7 @@ sudo swapon --show
 echo '/swapfile none  swap sw 0 0' | sudo tee -a /etc/fstab
 
 # fix 'ç' & 'Ç' in international keyboard
-cp ./linux/assets/.XCompose ~/
+cp .XCompose ~/
 
 # jetbrains mono font
 unzip ./linux/assets/ttf.zip -d /tmp
