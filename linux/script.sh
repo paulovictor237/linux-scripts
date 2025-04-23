@@ -8,7 +8,7 @@ neofetch ## show your system information
 sudo apt install zsh -y
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yes | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-cat .zshrc.sh >> ~/.zshrc
+cat ./linux/.zshrc.sh >> ~/.zshrc
 chsh -s $(which zsh)
 zsh
 source ~/.zshrc 
@@ -71,8 +71,11 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 # edge
-sudo apt install microsoft-edge-stable=130.0.2849.80-1
-sudo apt-mark hold microsoft-edge-stable
+sudo apt remove microsoft-edge-stable
+sudo rm ~/.config/microsoft-edge
+cd ~/Downloads
+sudo curl -o microsoft-edge-stable_121.0.2277.128-1_amd64.deb https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
+sudo apt install ./microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 
 # snap packages
 sudo apt install snapd -y
@@ -86,7 +89,6 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/m
 sudo apt install flatpak -y
 sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub -y --noninteractive com.jetpackduba.Gitnuro
 flatpak install flathub -y --noninteractive com.stremio.Stremio
 flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
@@ -116,7 +118,7 @@ sudo swapon --show
 echo '/swapfile none  swap sw 0 0' | sudo tee -a /etc/fstab
 
 # fix 'ç' & 'Ç' in international keyboard
-cp .XCompose ~/
+cp ./linux/.XCompose ~/
 
 # jetbrains mono font
 unzip ./linux/assets/ttf.zip -d /tmp
@@ -128,8 +130,8 @@ sudo fc-cache -f -v
 sudo apt update
 sudo apt install openjdk-17-jdk -y
 readlink -f $(which java)      
-npm i -g flipper-server@0.195.0 appcenter-cli 
 sudo apt install watchman -y
+gsettings set org.gnome.mutter check-alive-timeout 0
 
 # gnome-shell-extensions
 sudo apt install gnome-shell-extensions -y
