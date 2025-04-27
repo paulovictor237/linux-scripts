@@ -48,6 +48,7 @@ sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo groupadd docker
 sudo usermod -aG docker $USER
+# sudo chown -R $USER:$USER ./folder
 sudo docker run hello-world
 
 # git and ssh configuration
