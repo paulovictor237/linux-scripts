@@ -78,6 +78,7 @@ sudo rm ~/.config/microsoft-edge
 cd ~/Downloads
 sudo curl -o microsoft-edge-stable_121.0.2277.128-1_amd64.deb https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 sudo apt install ./microsoft-edge-stable_121.0.2277.128-1_amd64.deb
+sudo apt install --only-upgrade microsoft-edge-stable
 
 # snap packages
 sudo apt install snapd -y
