@@ -143,6 +143,11 @@ https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
 https://extensions.gnome.org/extension/3193/blur-my-shell/;
 https://extensions.gnome.org/extension/4033/x11-gestures/
 
+# boot grub
+code /etc/default/grub
+# GRUB_DEFAULT=4
+sudo update-grub
+
 # Em caso de bugs [ Disable Wayland, active only X11 (Xorg) ]
 code /etc/gdm3/custom.conf
 WaylandEnable=false #Uncomment the line
