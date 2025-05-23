@@ -4,6 +4,18 @@ sudo apt upgrade -y
 sudo apt install neofetch git curl -y   
 neofetch ## show your system information   
 
+# git and ssh configuration
+git config --global user.name "peve"
+git config --global user.email "paulovictor237@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "paulovictor237@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+# show your ssh key, paste on github or bitbucket
+cat  ~/.ssh/id_rsa.pub # Show the key
+# enable remote ssh after active the key 
+ssh -T git@github.com #  response YES
+ssh -T git@bitbucket.org #  response YES
+
 # zsh
 sudo apt install zsh -y
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -26,6 +38,7 @@ nvm list
 sudo apt update
 sudo apt install -y build-essential zlib1g-dev libffi-dev libssl-dev liblzma-dev libbz2-dev libreadline-dev libsqlite3-dev
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+source ~/.zshrc 
 pyenv install 3.10
 pyenv shell 3.10.0
 pyenv global 3.10
@@ -50,18 +63,6 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 # sudo chown -R $USER:$USER ./folder
 sudo docker run hello-world
-
-# git and ssh configuration
-git config --global user.name "peve"
-git config --global user.email "paulovictor237@gmail.com"
-ssh-keygen -t rsa -b 4096 -C "paulovictor237@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-# show your ssh key, paste on github or bitbucket
-cat  ~/.ssh/id_rsa.pub # Show the key
-# enable remote ssh after active the key 
-ssh -T git@github.com #  response YES
-ssh -T git@bitbucket.org #  response YES
 
 ################################################
 #             DESKTOP APPLICATIONS             #
@@ -139,6 +140,7 @@ sudo apt install gnome-shell-extensions -y
 https://extensions.gnome.org/extension/6807/system-monitor/
 https://extensions.gnome.org/extension/779/clipboard-indicator/
 https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
+https://extensions.gnome.org/extension/3193/blur-my-shell/;
 https://extensions.gnome.org/extension/4033/x11-gestures/
 
 # Em caso de bugs [ Disable Wayland, active only X11 (Xorg) ]
