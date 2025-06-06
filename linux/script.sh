@@ -103,7 +103,7 @@ sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
 flatpak install flathub -y --noninteractive com.obsproject.Studio
 
 # teleport
-curl https://goteleport.com/static/install.sh | bash -s 16.4.15
+curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
 
 # swap expand 19G
 free -m
