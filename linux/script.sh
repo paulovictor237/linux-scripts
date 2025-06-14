@@ -32,7 +32,7 @@ source ~/.zshrc
 nvm install v20.12.2 
 nvm alias default v20.12.2
 nvm use v20.12.2
-npm i -g yarn bun
+npm i -g yarn bun @google/gemini-cli
 nvm list       
 
 # python

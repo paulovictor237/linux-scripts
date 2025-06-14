@@ -57,6 +57,11 @@ curl -sS https://raw.githubusercontent.com/catppuccin/starship/refs/heads/main/s
 echo "Definindo Zsh como shell padrão..."
 chsh -s $(which zsh)
 
+# Instala o tema Catppuccin para o GNOME Terminal
+echo "Instalando tema Catppuccin para GNOME Terminal..."
+curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v1.0.0/install.py | python3 -
+
+
 echo "-----------------------------------------------------------------------"
 echo "Instalação concluída!"
 echo "Por favor, reinicie sua sessão (faça logout e login novamente)."
