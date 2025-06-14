@@ -19,6 +19,7 @@ ssh -T git@bitbucket.org #  response YES
 # zsh
 sudo apt install zsh -y
 yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+yes | sh -c "$(curl -fsSL https://git.io/zinit-install)"
 yes | bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 cat ./linux/.zshrc.sh >> ~/.zshrc
 chsh -s $(which zsh)

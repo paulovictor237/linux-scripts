@@ -2,8 +2,8 @@ curl -s "https://laravel.build/meu-projeto?with=mysql,redis,mailpit" | bash
 cd meu-projeto
 
 # alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-echo "alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'" > ~/.bashrc && source ~/.bashrc
-echo "alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'" > ~/.zshrc && source ~/.zshrc
+echo "alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'" >> ~/.bashrc && source ~/.bashrc
+echo "alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'" >> ~/.zshrc && source ~/.zshrc
 
 sail up -d
 sail artisan migrate
