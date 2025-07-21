@@ -101,9 +101,11 @@ flatpak install flathub -y --noninteractive org.flameshot.Flameshot
 flatpak install flathub -y --noninteractive com.rtosta.zapzap
 
 # install obs
-sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
-sudo apt install ffmpeg
-flatpak install flathub -y --noninteractive com.obsproject.Studio
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install ffmpeg obs-studio
+# Definir o codificador de vídeo para Software x264 no OBS via linha de comando
+# flatpak install flathub -y --noninteractive com.obsproject.Studio
 
 # teleport
 curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
