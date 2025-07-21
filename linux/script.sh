@@ -123,12 +123,6 @@ echo '/swapfile none  swap sw 0 0' | sudo tee -a /etc/fstab
 # fix 'ç' & 'Ç' in international keyboard
 cp ./linux/.XCompose ~/
 
-# jetbrains mono font
-unzip ./linux/assets/ttf.zip -d /tmp
-mkdir ~/.local/share/fonts
-cp -R /tmp/ttf/* ~/.local/share/fonts
-sudo fc-cache -f -v
-
 # react native
 sudo apt update
 sudo apt install openjdk-17-jdk -y
