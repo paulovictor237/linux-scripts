@@ -98,6 +98,7 @@ flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 flatpak install flathub -y --noninteractive org.flameshot.Flameshot
+flatpak install flathub -y --noninteractive com.rtosta.zapzap
 
 # install obs
 sudo apt install libxtst-dev libxss-dev libprocps-dev libopencv-dev
