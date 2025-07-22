@@ -123,6 +123,12 @@ echo '/swapfile none  swap sw 0 0' | sudo tee -a /etc/fstab
 # fix 'ç' & 'Ç' in international keyboard
 cp ./linux/.XCompose ~/
 
+# PX Design System Access
+# 1. Acesse https://github.com/settings/tokens
+# 2. Generate new token (Classic)
+# 3. Permissão "read:packages"
+export GITHUB_TOKEN=seu_token_aqui >> ~/.zshrc
+
 # react native
 sudo apt update
 sudo apt install openjdk-17-jdk -y
