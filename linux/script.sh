@@ -81,6 +81,9 @@ sudo curl -o microsoft-edge-stable_121.0.2277.128-1_amd64.deb https://packages.m
 sudo apt install ./microsoft-edge-stable_121.0.2277.128-1_amd64.deb
 sudo apt install --only-upgrade microsoft-edge-stable
 
+# clipboard manager
+sudo apt install copyq -y
+
 # snap packages
 sudo apt install snapd -y
 sudo snap install code --classic
