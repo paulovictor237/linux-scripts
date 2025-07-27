@@ -15,6 +15,12 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 # Regolith Tweaks
 sudo apt install gnome-tweaks -y
 
+# terminal tools
+sudo apt install neofetch -y && neofetch
+sudo apt install btop -y && btop
+sudo apt install cmatrix -y && cmatrix
+sudo apt install cowsay fortune -y && fortune | cowsay
+
 # fix dark mode in gtk apps
 mkdir -p ~/.config/xdg-desktop-portal
 echo -e "[preferred]\ndefault=gtk;wlr" > ~/.config/xdg-desktop-portal/portals.conf
