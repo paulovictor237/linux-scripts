@@ -1,7 +1,9 @@
 # update
 sudo apt update
 sudo apt upgrade -y
-sudo apt install neofetch git curl -y   
+sudo apt install git curl -y  
+sudo apt install btop -y
+sudo apt install neofetch -y
 neofetch ## show your system information   
 
 # git and ssh configuration

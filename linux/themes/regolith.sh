@@ -12,9 +12,10 @@ sudo apt update
 sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
 # System Restart
 
+# Regolith Tweaks
+sudo apt install gnome-tweaks -y
+
 # fix dark mode in gtk apps
 mkdir -p ~/.config/xdg-desktop-portal
 echo -e "[preferred]\ndefault=gtk;wlr" > ~/.config/xdg-desktop-portal/portals.conf
-
-
 
