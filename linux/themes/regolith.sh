@@ -25,6 +25,12 @@ sudo apt install cowsay fortune -y && fortune | cowsay
 sudo apt install bat -y && bat --version
 sudo apt install gnome-tweaks -y
 
+# tray bar
+sudo apt install copyq -y
+sudo snap install flameshot -y
+# flatpak install flathub -y --noninteractive org.flameshot.Flameshot
+sudo snap install indicator-sound-switcher -y
+
 # Wallpapers
 https://wallhaven.cc/w/1jrkjv
 https://wallhaven.cc/w/v9owd3
