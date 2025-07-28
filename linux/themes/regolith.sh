@@ -20,6 +20,7 @@ echo -e "[preferred]\ndefault=gtk;wlr" > ~/.config/xdg-desktop-portal/portals.co
 sudo apt install neofetch -y && neofetch
 sudo apt install btop -y && btop
 sudo apt install cmatrix -y && cmatrix
+sudo apt install pipes-sh -y && pipes
 sudo apt install cowsay fortune -y && fortune | cowsay
 sudo apt install bat -y && bat --version
 sudo apt install gnome-tweaks -y
