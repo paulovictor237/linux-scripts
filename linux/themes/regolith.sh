@@ -9,12 +9,19 @@ https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 Update apt and install Regolith
 sudo apt update
-sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille -y
 # System Restart
 
 # fix dark mode in gtk apps
 mkdir -p ~/.config/xdg-desktop-portal
 echo -e "[preferred]\ndefault=gtk;wlr" > ~/.config/xdg-desktop-portal/portals.conf
+
+# tray bar
+sudo apt install copyq -y
+sudo snap install flameshot -y
+# flatpak install flathub -y --noninteractive org.flameshot.Flameshot
+sudo snap install indicator-sound-switcher
+sudo apt install gnome-tweaks -y
 
 # terminal tools
 sudo apt install neofetch -y && neofetch
@@ -23,13 +30,6 @@ sudo apt install cmatrix -y && cmatrix
 sudo apt install pipes-sh -y && pipes
 sudo apt install cowsay fortune -y && fortune | cowsay
 sudo apt install bat -y && bat --version
-sudo apt install gnome-tweaks -y
-
-# tray bar
-sudo apt install copyq -y
-sudo snap install flameshot -y
-# flatpak install flathub -y --noninteractive org.flameshot.Flameshot
-sudo snap install indicator-sound-switcher -y
 
 # Wallpapers
 https://wallhaven.cc/w/1jrkjv
