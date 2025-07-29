@@ -32,6 +32,20 @@ sudo apt install pipes-sh -y && pipes
 sudo apt install cowsay fortune -y && fortune | cowsay
 sudo apt install bat -y && bat --version
 
+# lazydocker
+curl -Lo lazydocker.tar.gz "https://github.com/jesseduffield/lazydocker/releases/latest/download/lazydocker_0.24.1_Linux_x86_64.tar.gz" && \
+  tar -xvzf lazydocker.tar.gz && \
+  sudo install lazydocker /usr/local/bin && \
+  rm lazydocker.tar.gz lazydocker
+lazydocker
+
+# lazygit
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_0.53.0_Linux_x86_64.tar.gz" && \
+  tar -xvzf lazygit.tar.gz && \
+  sudo install lazygit /usr/local/bin && \
+  rm lazygit lazygit.tar.gz
+lazygit
+
 # Wallpapers
 https://wallhaven.cc/w/1jrkjv
 https://wallhaven.cc/w/v9owd3
