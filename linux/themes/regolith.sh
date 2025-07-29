@@ -22,6 +22,7 @@ sudo snap install flameshot -y
 # flatpak install flathub -y --noninteractive org.flameshot.Flameshot
 sudo snap install indicator-sound-switcher
 sudo apt install gnome-tweaks -y
+sudo apt install gnome-calendar -y
 
 # terminal tools
 sudo apt install neofetch -y && neofetch
