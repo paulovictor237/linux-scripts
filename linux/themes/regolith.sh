@@ -46,6 +46,9 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
   rm lazygit lazygit.tar.gz
 lazygit
 
+# atalhos
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
+
 # Wallpapers
 https://wallhaven.cc/w/1jrkjv
 https://wallhaven.cc/w/v9owd3
