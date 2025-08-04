@@ -16,6 +16,10 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 mkdir -p ~/.config/xdg-desktop-portal
 echo -e "[preferred]\ndefault=gtk;wlr" > ~/.config/xdg-desktop-portal/portals.conf
 
+# settings for regolith
+sudo apt install i3xrocks-battery -y
+regolith-look refresh
+
 # tray bar
 sudo apt install copyq -y
 sudo snap install flameshot -y
