@@ -89,7 +89,7 @@ sudo apt install snapd -y
 sudo snap install code --classic
 sudo snap install android-studio --classic
 sudo snap install obsidian --classic
-sudo snap install slack spotify emote postman insomnia beekeeper-studio dbeaver-ce bitwarden
+sudo snap install slack spotify emote postman insomnia beekeeper-studio dbeaver-ce bitwarden wps-office
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
 
 # install flatpak
