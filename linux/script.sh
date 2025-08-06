@@ -89,7 +89,7 @@ sudo apt install snapd -y
 sudo snap install code --classic
 sudo snap install android-studio --classic
 sudo snap install obsidian --classic
-sudo snap install slack spotify emote postman insomnia beekeeper-studio dbeaver-ce bitwarden wps-office
+sudo snap install slack spotify emote postman insomnia beekeeper-studio dbeaver-ce bitwarden
 bash -c "$(wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh)"
 
 # install flatpak
@@ -102,6 +102,7 @@ flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 flatpak install flathub -y --noninteractive org.flameshot.Flameshot
 flatpak install flathub -y --noninteractive com.rtosta.zapzap
+flatpak install flathub -y --noninteractive org.onlyoffice.desktopeditors
 
 # install obs
 sudo add-apt-repository ppa:obsproject/obs-studio
