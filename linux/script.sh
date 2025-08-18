@@ -115,6 +115,7 @@ sudo apt install ffmpeg obs-studio
 curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
 
 # swap expand 19G
+sudo swapoff /swapfile
 free -m
 sudo swapon --show
 sudo fallocate -l 19G /swapfile
