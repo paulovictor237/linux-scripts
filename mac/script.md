@@ -1,381 +1,277 @@
-# Guia Manual — Setup de Desenvolvimento no macOS Sequoia 15.5
+# Guia macOS Sequoia 15.5 — Setup de Desenvolvimento
 
-> **Como usar**: cada seção abaixo contém **apenas comandos**. Copie e cole no Terminal conforme sua necessidade. Itens opcionais estão marcados como *(opcional)*. Onde houver caminhos diferentes para Apple Silicon (ARM) e Intel, siga o bloco indicado.
+> **Formato:** cada item traz **nome** e **comandos** para você copiar/colar. Execute **na ordem**.
 
 ---
 
-## 0) Pré‑requisitos do sistema
-
-### 0.1 Verificar arquitetura (Apple Silicon vs Intel)
+## 0) Atualizações & Ferramentas Apple
 
 ```bash
-uname -m
-# arm64 = Apple Silicon | x86_64 = Intel
-```
-
-### 0.2 (Apple Silicon) Instalar Rosetta 2 *(se pedir)*
-
-```bash
+# Atualizar o macOS (opcional)
+softwareupdate -l
+# Instalar ferramentas de linha de comando (necessário)
+xcode-select --install
+# (Apple Silicon) Instalar Rosetta 2 para apps Intel, se solicitado
 softwareupdate --install-rosetta --agree-to-license
 ```
 
-### 0.3 Xcode Command Line Tools
-
-```bash
-xcode-select --install
-```
-
 ---
 
-## 1) Homebrew (gestor de pacotes)
-
-### 1.1 Instalar Homebrew
+## 1) Homebrew (gerenciador de pacotes)
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### 1.2 Colocar o `brew` no PATH
-
-**Apple Silicon (arm64)**
-
-```bash
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+# Adicionar o Homebrew ao PATH (Apple Silicon)
+echo 'eval "$($(brew --prefix)/bin/brew shellenv)"' >> ~/.zprofile
 source ~/.zprofile
-```
-
-**Intel (x86\_64)**
-
-```bash
-echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
-source ~/.zprofile
-```
-
-### 1.3 Atualizar Homebrew
-
-```bash
-brew update && brew upgrade
+brew update && brew doctor
 ```
 
 ---
 
-## 2) Git & SSH
-
-### 2.1 Git
+## 2) Git & SSH (GitHub/Bitbucket)
 
 ```bash
+# (Opcional) Instalar Git via Homebrew
 brew install git
-```
 
-### 2.2 Configuração do Git
+# Identidade Git
+git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@exemplo.com"
 
-```bash
-git config --global user.name "seu_nome"
-git config --global user.email "seu_email@example.com"
-```
-
-### 2.3 Criar chave SSH (recomendado ed25519)
-
-```bash
-ssh-keygen -t ed25519 -C "seu_email@example.com"
+# Chave SSH ED25519 (recomendado)
+ssh-keygen -t ed25519 -C "seu-email@exemplo.com"
+# Agente SSH
 eval "$(ssh-agent -s)"
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519  # macOS integra com o Keychain
-```
-
-*(Alternativa compatível com o script original — RSA 4096)*
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "seu_email@example.com"
-ssh-add --apple-use-keychain ~/.ssh/id_rsa
-```
-
-### 2.4 Copiar a chave pública para colar no GitHub/Bitbucket
-
-```bash
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+# Exibir a chave pública para colar no GitHub/Bitbucket
 cat ~/.ssh/id_ed25519.pub
-# ou
-cat ~/.ssh/id_rsa.pub
-```
 
-### 2.5 Testar acesso
-
-```bash
+# Testar acesso (responda YES na primeira vez)
 ssh -T git@github.com
 ssh -T git@bitbucket.org
 ```
 
 ---
 
-## 3) Zsh + Plugins
-
-### 3.1 (oh-my-zsh)
+## 3) Zsh, Oh My Zsh & Zinit (plugins)
 
 ```bash
-export RUNZSH=no
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
+# Oh My Zsh
+env ZSH=~/.oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-### 3.2 (opcional) Zinit
-
-```bash
+# Zinit (gerenciador de plugins)
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-```
 
-### 3.3 Recarregar shell
+# Plugins essenciais via Zinit (adicione ao final do seu ~/.zshrc)
+cat >> ~/.zshrc <<'EOF'
+### Zinit Plugins
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+### Fim Zinit Plugins
+EOF
 
-```bash
-exec zsh -l
+# Aplicar alterações
+source ~/.zshrc
+# (Opcional) Tornar zsh o shell padrão
+chsh -s $(which zsh)
 ```
 
 ---
 
-## 4) Node.js (NVM), Yarn e Bun
-
-### 4.1 NVM
+## 4) Node.js (NVM), Yarn, Bun, CLIs
 
 ```bash
+# NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# Carregar NVM no shell atual
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"' >> ~/.zshrc
+# (Apple Silicon) fallback para o path padrão do instalador
+echo '[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"' >> ~/.zshrc
 source ~/.zshrc
-```
 
-### 4.2 Node 20.x (seguir o script original)
-
-```bash
+# Node LTS e padrão
 nvm install v20.12.2
 nvm alias default v20.12.2
 nvm use v20.12.2
-```
 
-### 4.3 Pacotes globais
+# Pacotes globais
+npm i -g yarn @google/gemini-cli
 
-```bash
-npm i -g yarn bun @google/gemini-cli
-nvm list
-```
+# Bun (runtime JS/TS alternativo)
+curl -fsSL https://bun.sh/install | bash
+# Disponibilizar Bun imediatamente
+export BUN_INSTALL="$HOME/.bun" && export PATH="$BUN_INSTALL/bin:$PATH"
 
-*(Alternativa Bun via Homebrew)*
-
-```bash
-brew install bun
+# Verificar versões
+node -v && npm -v && yarn -v && bun -v
 ```
 
 ---
 
-## 5) Python (pyenv) + Pipenv
-
-### 5.1 Dependências de build
+## 5) Python (pyenv) & Pipenv
 
 ```bash
-brew install pyenv openssl readline sqlite3 xz zlib tcl-tk
-```
+# Dependências e pyenv
+brew install pyenv openssl readline sqlite xz zlib tcl-tk
 
-### 5.2 Variáveis recomendadas para builds de Python
+# Ativar pyenv no Zsh
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+source ~/.zshrc
 
-```bash
-# Ajusta caminhos para libs do Homebrew (Apple Silicon)
-echo 'export LDFLAGS="-L/opt/homebrew/opt/zlib/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/openssl@3/lib"' >> ~/.zprofile
-echo 'export CPPFLAGS="-I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/sqlite/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/openssl@3/include"' >> ~/.zprofile
-source ~/.zprofile
-```
+# Instalar e usar Python 3.10
+pyenv install 3.10.13
+pyenv global 3.10.13
 
-*(Para Intel, troque `/opt/homebrew` por `/usr/local` caso necessário.)*
-
-### 5.3 Instalar e escolher Python 3.10.x
-
-```bash
-pyenv install 3.10.14
-pyenv global 3.10.14
-python3 -V
-```
-
-### 5.4 Pip e Pipenv
-
-```bash
+# Pip e Pipenv
 python3 -m pip install --upgrade pip
 pip install pipenv
-pyenv versions
+
+# Conferir versões
+python --version && pip --version && pipenv --version
 ```
 
 ---
 
-## 6) Docker Desktop
-
-### 6.1 Instalar Docker Desktop
+## 6) Docker
 
 ```bash
 brew install --cask docker
 open -a Docker
-```
-
-### 6.2 Testar
-
-```bash
+# Após o Docker iniciar
 docker run hello-world
 ```
 
 ---
 
-## 7) Aplicativos (Homebrew Casks)
-
-### 7.1 IDEs e utilitários de dev
+## 7) Apps de Trabalho (Homebrew Casks)
 
 ```bash
-brew install --cask visual-studio-code android-studio postman insomnia beekeeper-studio dbeaver-community bitwarden copyq
-```
-
-### 7.2 Navegadores
-
-```bash
-brew install --cask google-chrome microsoft-edge
-```
-
-### 7.3 Produtividade
-
-```bash
-brew install --cask obsidian slack spotify stremio
-```
-
-### 7.4 OBS Studio e FFmpeg
-
-```bash
-brew install --cask obs
-brew install ffmpeg
+brew install --cask \
+  visual-studio-code android-studio obsidian slack spotify postman insomnia \
+  beekeeper-studio dbeaver-community bitwarden google-chrome microsoft-edge \
+  copyq kap shottr obs stremio whatsapp
 ```
 
 ---
 
-## 8) Teleport (goteleport)
+## 8) Nerd Fonts (JetBrains Mono, Fira Code, Meslo)
 
 ```bash
-brew install teleport
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-meslo-lg-nerd-font
 ```
 
 ---
 
-## 9) React Native — macOS
-
-### 9.1 iOS — Xcode & CocoaPods
+## 9) Variáveis de Ambiente (GitHub Packages, etc.)
 
 ```bash
-# Instale o Xcode (App Store) e abra uma vez para concluir componentes
-# Em seguida:
-xcode-select --switch /Applications/Xcode.app/Contents/Developer
-sudo xcodebuild -license accept
-brew install cocoapods
-pod --version
-```
-
-### 9.2 Watchman
-
-```bash
-brew install watchman
-```
-
-### 9.3 Java 17 (Temurin)
-
-```bash
-brew install --cask temurin@17
-/usr/libexec/java_home -V
-```
-
-### 9.4 Android — SDK & variáveis de ambiente
-
-```bash
-# 1) Instale o Android Studio (já instalado acima)
-# 2) Abra o Android Studio > SDK Manager e instale:
-#    - Android SDK Platform (API mais recente)
-#    - Android SDK Platform-Tools
-#    - Android SDK Build-Tools
-#    - Android Emulator
-#    - Android System Images (para o simulador)
-# 3) Exporte variáveis (ajuste o caminho se necessário):
-
-# Apple Silicon (arm64)
-echo 'export ANDROID_HOME="$HOME/Library/Android/sdk"' >> ~/.zprofile
-echo 'export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"' >> ~/.zprofile
-
-# Intel (x86_64) — normalmente igual ao acima
-# Se usar caminho customizado, ajuste ANDROID_HOME para o local correto
-
-source ~/.zprofile
-
-# 4) Aceitar licenças (com SDK CLI instalado)
-yes | "$ANDROID_HOME"/cmdline-tools/latest/bin/sdkmanager --licenses || true
-```
-
-### 9.5 Criar projeto React Native (exemplo)
-
-```bash
-# Node já instalado via NVM
-npx react-native@latest init MeuApp
-cd MeuApp
-```
-
-### 9.6 Executar no iOS Simulator
-
-```bash
-npm run ios
-# ou
-npx react-native run-ios
-```
-
-### 9.7 Executar no Android Emulator
-
-```bash
-npm run android
-# ou
-npx react-native run-android
-```
-
----
-
-## 10) Acesso a Packages Privados do GitHub (PX Design System)
-
-### 10.1 GitHub CLI *(opcional, recomendado)*
-
-```bash
-brew install gh
-gh auth login
-```
-
-### 10.2 Token de leitura de packages (alternativa direta)
-
-```bash
-echo 'export GITHUB_TOKEN=SEU_TOKEN_COM_read:packages' >> ~/.zshrc
+# Exemplo: token para acessar pacotes privados
+echo 'export GITHUB_TOKEN="coloque_seu_token_aqui"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ---
 
-## 11) Verificações rápidas
+## 10) Mobile — Android (Android Studio + SDK)
 
 ```bash
-# Git
-git --version
+# JDK 17 (recomendado para Android)
+brew install --cask temurin17
+# Garantir JAVA_HOME para o JDK 17
+echo 'export JAVA_HOME="$(/usr/libexec/java_home -v 17)"' >> ~/.zshrc
+source ~/.zshrc
 
-# Node / NPM / Yarn / Bun
-node -v
-npm -v
-yarn -v
-bun -v
+# Android Studio (SDK/AVD via GUI)
+brew install --cask android-studio
+open -a "Android Studio"
+# > Instale: SDK Platform, Platform Tools, Build-Tools, Command-line Tools (SDK Manager)
 
-# Python / Pipenv
-python3 -V
-pipenv --version
+# Variáveis Android SDK
+echo 'export ANDROID_HOME="$HOME/Library/Android/sdk"' >> ~/.zshrc
+cat >> ~/.zshrc <<'EOF'
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH"
+EOF
+source ~/.zshrc
 
-# Docker
-docker --version
+# Aceitar licenças (após instalar Command-line Tools)
+yes | sdkmanager --licenses || true
 
-# React Native (CLI)
-npx react-native --version
+# Watchman (melhora RN/Metro)
+brew install watchman
 
-# CocoaPods / Watchman
-pod --version
-watchman --version
+# Verificações
+adb version
+adb devices
+emulator -list-avds || true
 ```
 
 ---
 
-## 12) Itens do script original removidos por serem específicos de Linux
+## 11) Mobile — iPhone (Xcode + Simulador)
 
-* `apt`, `snap`, `flatpak`, GRUB, GDM/Wayland, GNOME extensions e ajustes de swap/teclado foram omitidos por não se aplicarem ao macOS.
+```bash
+# Xcode (instale via App Store)
+open -a "App Store" https://apps.apple.com/app/xcode/id497799835
+# Após instalar, aceite os termos e componentes
+sudo xcodebuild -license accept || true
+sudo xcode-select -s /Applications/Xcode.app
+
+# Simulador iOS
+open -a Simulator
+xcrun simctl list devices
+
+# CocoaPods para projetos iOS (React Native, etc.)
+sudo gem install cocoapods
+pod --version
+```
+
+---
+
+## 12) React Native — Verificação Rápida (por projeto)
+
+```bash
+# Dentro do diretório do seu app RN
+npx react-native doctor
+# iOS: instalar pods (no diretório ios/)
+cd ios && pod install && cd -
+# Android: gradle wrapper inicial (primeiro build via Android Studio é recomendado)
+```
+
+---
+
+## 13) Utilitários de Captura & Clipboard (opcionais)
+
+```bash
+brew install --cask copyq shottr kap
+```
+
+---
+
+## 14) Conferência Final
+
+```bash
+# Checagens gerais
+brew --version
+zsh --version
+git --version
+node -v && npm -v && yarn -v && bun -v
+python --version && pip --version && pipenv --version
+docker --version
+adb version || true
+xcrun simctl list devices | head -n 20
+```
+
+---
+
+> **Observação:** Este guia adapta o conteúdo original (Ubuntu) para macOS, removendo partes específicas de Linux (Snap/Flatpak, GNOME, GRUB, swapfile, Wayland, etc.) e substituindo por equivalentes nativos do macOS.
