@@ -111,6 +111,7 @@ brew install --cask \
   whatsapp \
   slack \
   spotify \
+  figma \
   \
   visual-studio-code \
   obsidian \
