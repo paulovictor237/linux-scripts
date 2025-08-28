@@ -195,7 +195,3 @@ Caso veja o erro `macos zsh: command not found: code`:
 3. Reinicie o terminal (`zsh`).
 
 Agora o comando `code .` funcionará em qualquer pasta.
-
----
-
-Quer que eu também **faça uma versão enxuta** desse guia (só com os comandos em ordem para copiar/colar, sem explicações), para quando você quiser só executar?
