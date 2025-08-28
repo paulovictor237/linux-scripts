@@ -18,6 +18,7 @@ Cmd + Z / Cmd + Shift + Z Desfazer / Refazer
 ### Sistema
 
 Cmd + Espaço Spotlight
+Cmd + Shift + G Ir para pasta (Finder)
 Cmd + Shift + 5 Captura / Gravação tela
 Ctrl + Cmd + Espaço Emojis
 Ctrl + Espaço Trocar idioma teclado
