@@ -1,6 +1,13 @@
 # Guia macOS Sequoia 15.5 — Setup de Desenvolvimento
 
-## 0) Atualizações & Ferramentas Apple
+## Homebrew (gerenciador de pacotes)
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+source ~/.zshrc
+```
+
+## Atualizações & Ferramentas Apple
 
 ```bash
 brew update
@@ -10,14 +17,15 @@ brew cleanup
 
 ---
 
-## 1) Homebrew (gerenciador de pacotes)
+## Utilitários CLI
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-source ~/.zshrc
+```bash
+brew install neofetch
+```
 
 ---
 
-## 2) Git & SSH (GitHub/Bitbucket)
+## Git & SSH (GitHub/Bitbucket)
 
 ```bash
 # (Opcional) Instalar Git via Homebrew
@@ -29,9 +37,11 @@ git config --global user.email "seu-email@exemplo.com"
 
 # Chave SSH ED25519 (recomendado)
 ssh-keygen -t ed25519 -C "seu-email@exemplo.com"
+
 # Agente SSH
 eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
 # Exibir a chave pública para colar no GitHub/Bitbucket
 cat ~/.ssh/id_ed25519.pub
 
@@ -40,9 +50,11 @@ ssh -T git@github.com
 ssh -T git@bitbucket.org
 ```
 
-## 3) Zsh, Oh My Zsh & Zinit (plugins)
+---
 
-````bash
+## Zsh, Oh My Zsh & Zinit (plugins)
+
+```bash
 # Oh My Zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -60,93 +72,110 @@ EOF
 
 # Aplicar alterações
 source ~/.zshrc
+```
 
 ---
 
-# Instala o Starship
+## Starship Prompt + Catppuccin
 
+```bash
+# Instalar Starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 chsh -s $(which zsh)
 
-# Aplica o preset do Catppuccin (sabor Latte) para o Starship
-
+# Aplicar preset Catppuccin (Latte)
 mkdir -p ~/.config && touch ~/.config/starship.toml
 curl -sS https://raw.githubusercontent.com/catppuccin/starship/refs/heads/main/starship.toml -o ~/.config/starship.toml
+```
 
 ---
 
-## 8) Nerd Fonts (JetBrains Mono, Fira Code, Meslo)
+## Nerd Fonts (JetBrains Mono, Fira Code, Meslo)
 
 ```bash
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-fira-code-nerd-font
 brew install --cask font-meslo-lg-nerd-font
-````
+```
 
 ---
 
-brew install neofetch
-
----
-
-## 6) Docker
+## Mise (Node, Java, Python)
 
 ```bash
-brew install docker
-brew install colima
-colima start
+brew install mise
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+eval "$(mise activate zsh)"
+
+# Instalar runtimes
+mise use -g node@22
+node -v
+
+mise use -g java@17
+java -version
+
+mise use -g python@3.10
+python --version
+
+npm i -g yarn bun @google/gemini-cli
+```
+
+## Docker + Colima + Orbstack
+
+```bash
+brew install --cask orbstack
+# precisa abrir o programa antes de executar o hello
 docker run hello-world
 docker context ls
 ```
 
+🔍 Verificações:
+
+- `docker context ls` → confirma se está usando o socket do Colima.
+- `colima status` → confirma que a VM do Colima está rodando.
+
 ---
 
-## 7) Apps de Trabalho (Homebrew Casks)
+## Apps de Trabalho (Homebrew Casks)
 
 ```bash
-brew install --cask \
-  microsoft-edge \
-  google-chrome \
-  whatsapp \
-  slack \
-  spotify \
-  figma \
-  \
-  visual-studio-code \
-  obsidian \
-  android-studio \
-  \
-  postman \
-  insomnia \
-  \
-  beekeeper-studio \
-  dbeaver-community \
-  \
-  bitwarden \
-  obs \
-  stremio
+# Navegadores
+brew install --cask microsoft-edge google-chrome arc
+
+# Comunicação
+brew install --cask whatsapp slack
+
+# Launcher & Tweaks
+brew install --cask raycast scroll-reverser middleclick kap
+
+# Design & Notas
+brew install --cask figma obsidian spotify typora
+
+# IDEs & Dev
+brew install --cask visual-studio-code android-studio
+
+# API Clients
+brew install --cask postman insomnia bruno
+
+# Banco de Dados
+brew install --cask beekeeper-studio dbeaver-community
+
+# Segurança
+brew install --cask bitwarden
+
+# Multimídia & Produtividade
+brew install --cask obs stremio homerow davinci-resolve
+
+# Games
+brew install --cask steam
 ```
 
----
-
-brew install mise
-echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
-eval "$(mise activate zsh)"
-mise use -g node@22
-node -v
-mise use -g java@17
-java -version
-mise use -g python@3.10
-python --version
-
-# Pacotes globais
-
-npm i -g yarn bun @google/gemini-cli
+🔗 Outra opção de navegador: [Zen Browser](https://zen-browser.app/download/) (não disponível via Homebrew).
 
 ---
 
-## 9) Variáveis de Ambiente (GitHub Packages, etc.)
+## Variáveis de Ambiente (GitHub Packages, etc.)
 
 ```bash
 # Exemplo: token para acessar pacotes privados
@@ -156,20 +185,17 @@ source ~/.zshrc
 
 ---
 
-docker context ls → vê se está usando o colima socket.
+## VS Code — Habilitar `code` no Zsh
 
-colima status → confirma que a VM do Colima está rodando.
+Caso veja o erro `macos zsh: command not found: code`:
 
-macos zsh: command not found: code
-That error means your terminal doesn’t recognize the code command, which is used to launch Visual Studio Code from the command line. Here's how to fix it on macOS:
+1. Abra o VS Code.
+2. Pressione **Cmd + Shift + P** → digite e selecione:
+   `Shell Command: Install 'code' command in PATH`.
+3. Reinicie o terminal (`zsh`).
 
-🛠️ Enable code Command in Zsh
-Open Visual Studio Code.
+Agora o comando `code .` funcionará em qualquer pasta.
 
-Press Cmd + Shift + P to open the Command Palette.
+---
 
-Type and select: Shell Command: Install 'code' command in PATH
-
-Restart your terminal (zsh) and try running code . again.
-
-This adds the code command to your system’s PATH, making it accessible from any terminal session
+Quer que eu também **faça uma versão enxuta** desse guia (só com os comandos em ordem para copiar/colar, sem explicações), para quando você quiser só executar?

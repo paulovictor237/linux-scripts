@@ -1,34 +1,85 @@
-## 🔹 1. Resetar só as configurações do shell
+## 1. Reset rápido só do shell
 
-- Apague ou renomeie seus _dotfiles_:
-  `mv ~/.zshrc ~/.zshrc.bakmv ~/.zprofile ~/.zprofile.bakmv ~/.bash_profile ~/.bash_profile.bak`
-- Quando abrir o terminal de novo, ele vai voltar ao **padrão do macOS** (um `zsh` limpo).
-- Depois você reinstala só o que quiser (oh-my-zsh, zinit, etc.).
+1. Renomeie (ou apague) dotfiles principais:
 
----
+```bash
+mv ~/.zshrc ~/.zshrc.bak 2>/dev/null || true
+mv ~/.zprofile ~/.zprofile.bak 2>/dev/null || true
+mv ~/.bash_profile ~/.bash_profile.bak 2>/dev/null || true
+```
 
-## 🔹 2. Resetar pacotes e dependências (Homebrew, npm, pip, etc.)
-
-- Desinstalar Homebrew completamente:
-  `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)" `
-- Reinstalar Homebrew:
-  `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `
-- Remover caches/configs de linguagens:
-  `rm -rf ~/.npm ~/.cargo ~/.pyenv ~/.rbenv ~/.local ~/.config`
-  (ajuste conforme as linguagens que usa).
-- Se usa `nvm`, `rbenv`, `pyenv`, etc., só apagar as pastas já limpa o ambiente.
+2. Abra um novo terminal: volta ao `zsh` padrão.
+3. Reinstale só o que quiser (oh-my-zsh, zinit, etc.).
 
 ---
 
-## 🔹 3. Resetar as ferramentas de compilação da Apple
+## 2. Limpar gerenciadores e caches (Homebrew, linguagens)
 
-Às vezes o problema é o **Xcode Command Line Tools** (compiladores, headers, etc.).
-Você pode reinstalar assim:
-`sudo rm -rf /Library/Developer/CommandLineTools xcode-select --install`
+1. Desinstalar Homebrew:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+```
+
+2. Reinstalar Homebrew (se for usar):
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+3. Remover caches/configs de linguagens (ajuste se não usar alguma):
+
+```bash
+rm -rf ~/.npm ~/.cargo ~/.pyenv ~/.rbenv ~/.local ~/.config
+```
+
+4. Para `nvm`, `pyenv`, `rbenv`, etc.: apagar as pastas respectivas já limpa.
 
 ---
 
-## 🔹 4. Resetar completamente o ambiente de programação
+## 3. Reinstalar Xcode Command Line Tools
 
-Se quiser **zerar tudo mesmo** (como se nunca tivesse programado no Mac): 2. Apague **Homebrew** e todos os pacotes (`/usr/local` ou `/opt/homebrew`). 4. Apague configs de usuário em `~/Library/Preferences`, `~/Library/Application Support` relacionadas a dev. 6. Apague dotfiles em `~`. 8. Reinstale Xcode Command Line Tools.
-Depois disso, você volta ao estado “fresh install” sem precisar formatar o macOS inteiro.
+Remover e instalar de novo:
+
+```bash
+sudo rm -rf /Library/Developer/CommandLineTools && xcode-select --install
+```
+
+Verificar instalação depois:
+
+```bash
+xcode-select -p
+```
+
+---
+
+## 4. Reset total do ambiente de desenvolvimento
+
+Objetivo: voltar a um estado quase “fresh install” sem formatar.
+
+Passos sugeridos (execute conscientemente):
+
+1. Remover Homebrew + diretórios de pacotes:
+
+```bash
+# Intel
+sudo rm -rf /usr/local/Homebrew
+# Apple Silicon
+sudo rm -rf /opt/homebrew
+```
+
+2. Apagar pastas de linguagens/gerenciadores (reveja antes):
+
+```bash
+rm -rf ~/.npm ~/.cargo ~/.pyenv ~/.rbenv ~/.nvm ~/.local ~/.config
+```
+
+3. Remover dotfiles em `~` (`.zshrc`, `.bash_profile`, `.gitconfig`, etc.).
+4. Limpar configs dev em:
+   - `~/Library/Preferences`
+   - `~/Library/Application Support`
+     (apague só o que for claramente relacionado a dev.)
+5. Remover Xcode Command Line Tools e reinstalar (passo 3).
+6. Reiniciar terminal e reinstalar apenas o essencial.
+
+Resultado: ambiente limpo, sem precisar formatar o macOS.

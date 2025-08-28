@@ -1,33 +1,32 @@
-### Gerenciamento de Janelas e Apps
+## Atalhos macOS Essenciais
 
-- **`Command + Q`**: Encerra o aplicativo completamente (não apenas fecha a janela).
-- **`Command + W`**: Fecha a janela ou aba ativa no momento.
-- **`Command + M`**: Minimiza a janela ativa para o Dock.
-- **`Control + Command + F`**: Coloca o aplicativo em modo de tela cheia (Full Screen).
-- **`Command + Option + D`**: Mostra ou oculta o Dock (a barra de aplicativos na parte inferior).
+### Janelas & Apps
 
-### Edição de Texto e Conteúdo
+Cmd + Q Sair app
+Cmd + W Fechar janela/aba
+Cmd + M Minimizar
+Ctrl + Cmd + F Tela cheia
+Cmd + Opt + D Mostrar/ocultar Dock
 
-- **`Command + X`**: Recortar texto ou outro conteúdo.
-- **`Command + C`**: Copiar texto, arquivos ou pastas.
-- **`Command + V`**: Colar o item que foi copiado ou recortado.
-- **`Command + Option + V`**: **Mover** um arquivo/pasta que foi copiado (equivale a recortar e colar arquivos).
-- **`Command + Option + Shift + V`**: Cola o texto sem nenhuma formatação (cor, tamanho, etc.)
-- **`Command + Z`**: Desfazer a última ação.
-- **`Command + Shift + Z`**: Refazer a ação que foi desfeita.
+### Edição
 
-### Ferramentas e Utilitários do Sistema
+Cmd + X / C / V Recortar / Copiar / Colar
+Cmd + Opt + V Mover arquivo (colar como mover)
+Cmd + Opt + Shift + V Colar sem formatação
+Cmd + Z / Cmd + Shift + Z Desfazer / Refazer
 
-- **`Command + Barra de Espaço`**: Abre a busca do **Spotlight**.
-- **`Command + Shift + 5`**: Abre a ferramenta para **capturar a tela** ou **gravar um vídeo da tela**.
-- **`Control + Command + Barra de Espaço`**: Abre o visualizador de caracteres, incluindo **emojis** e símbolos.
-- **`Control + Barra de Espaço`**: Alterna entre os idiomas de teclado configurados (ex: Português e Inglês).
-- **`F4`** ou **`Fn + F4`**: Abre o **Launchpad** (visualização de todos os apps).
+### Sistema
 
-### Navegação no Sistema e Espaços de Trabalho (Workspaces)
+Cmd + Espaço Spotlight
+Cmd + Shift + 5 Captura / Gravação tela
+Ctrl + Cmd + Espaço Emojis
+Ctrl + Espaço Trocar idioma teclado
+F4 (Fn + F4) Launchpad
 
-- **`Control + Command + Q`** — Bloquear a tela do Mac imediatamente
-- **`F11`** ou **`Fn + F11`**: Mostra a **Área de Trabalho** (Mesa), afastando todas as janelas.
-- **`Control + Seta para Cima`**: Abre o **Mission Control**, mostrando todas as janelas e áreas de trabalho ativas.
-- **`Control + Seta para Baixo`**: Mostra todas as janelas abertas do aplicativo que está em uso.
-- **`Control + Seta para Esquerda/Direita`**: Alterna entre as diferentes Áreas de Trabalho (desktops virtuais).
+### Navegação & Workspaces
+
+Ctrl + Cmd + Q Bloquear tela
+F11 (Fn + F11) Mostrar Mesa
+Ctrl + ↑ Mission Control
+Ctrl + ↓ Janelas do app
+Ctrl + ← / → Trocar desktop
