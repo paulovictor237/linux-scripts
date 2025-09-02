@@ -167,6 +167,9 @@ brew install --cask bitwarden
 # Multimídia & Produtividade
 brew install --cask obs stremio homerow davinci-resolve
 
+# Bateria / Gestão (MacBooks)
+brew install --cask aldente
+
 # Games
 brew install --cask steam
 ```
