@@ -303,6 +303,30 @@ EOF
 source ~/.zshrc
 ```
 
+### 11.2 Aumentar limites do inotify (solução imediata)
+
+Necessário para projetos com muitos arquivos (React Native, monorepos, Webpack, Watchman). Evita erros: "ENOSPC: System limit for number of file watchers reached".
+
+```bash
+# Ver valores atuais (opcional)
+sysctl fs.inotify.max_user_watches fs.inotify.max_user_instances fs.inotify.max_queued_events
+
+# Aumente para algo confortável (efeito imediato até reboot)
+sudo sysctl -w fs.inotify.max_user_watches=524288
+sudo sysctl -w fs.inotify.max_user_instances=8192
+sudo sysctl -w fs.inotify.max_queued_events=65536
+
+# Torne permanente
+echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/99-inotify.conf
+echo fs.inotify.max_user_instances=8192  | sudo tee -a /etc/sysctl.d/99-inotify.conf
+echo fs.inotify.max_queued_events=65536  | sudo tee -a /etc/sysctl.d/99-inotify.conf
+sudo sysctl --system
+```
+
+> Caso já tenha adicionado no `/etc/sysctl.conf`, não há problema; apenas evite duplicar entradas. O método via `/etc/sysctl.d/99-inotify.conf` é mais limpo.
+
+---
+
 ---
 
 ## 12. Extensões GNOME (Links)
