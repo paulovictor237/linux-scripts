@@ -81,7 +81,66 @@ source ~/.zshrc
 
 ---
 
-## 4. Node.js (NVM) + Ferramentas Globais
+## 4. Theming & Terminal (Catppuccin + Starship)
+
+### 4.1 Shell / Prompt / Plugins
+
+Aplicar tema visual e prompt moderno antes das linguagens ajuda a ter um ambiente mais legível.
+
+```bash
+# Dependências básicas (algumas já podem estar instaladas; se você acabou de executar a seção 3, zsh já está presente)
+sudo apt update
+command -v zsh >/dev/null || sudo apt install -y zsh
+sudo apt install -y curl git unzip fontconfig wget python3
+
+# Starship Prompt
+curl -sS https://starship.rs/install.sh | sh -s -- -y
+grep -q 'starship init zsh' ~/.zshrc || echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+
+# Config Catppuccin para Starship
+mkdir -p ~/.config
+curl -fsSL https://raw.githubusercontent.com/catppuccin/starship/refs/heads/main/starship.toml -o ~/.config/starship.toml
+
+# Tema Catppuccin GNOME Terminal
+curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v1.0.0/install.py | python3 - || true
+
+echo "Catppuccin + Starship instalados. Agora instale as fontes na seção 4.2."
+```
+
+### 4.2 Fonts (FiraCode Nerd + JetBrains Mono)
+
+Instalação separada para facilitar remoção/atualização independente do tema.
+
+```bash
+mkdir -p ~/.local/share/fonts
+
+# FiraCode Nerd Font
+wget -O /tmp/firacode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
+unzip -o /tmp/firacode.zip -d ~/.local/share/fonts/FiraCodeNerdFont
+rm /tmp/firacode.zip
+
+# JetBrains Mono
+wget -O /tmp/jetbrainsmono.zip https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip
+unzip -o /tmp/jetbrainsmono.zip -d ~/.local/share/fonts/JetBrainsMono
+rm /tmp/jetbrainsmono.zip
+
+# Atualiza cache e confirma
+fc-cache -fv | grep -i "FiraCode\|JetBrains" || true
+
+echo "Fonts instaladas. Ajuste no terminal/VS Code para 'FiraCode Nerd Font' ou 'JetBrains Mono'."
+```
+
+### 4.3 (Opcional) Ajustes VS Code
+
+```
+"terminal.integrated.fontFamily": "FiraCode Nerd Font",
+"editor.fontFamily": "FiraCode Nerd Font, JetBrains Mono, monospace",
+"editor.fontLigatures": true,
+```
+
+---
+
+## 5. Node.js (NVM) + Ferramentas Globais
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
@@ -105,7 +164,7 @@ npm i -g yarn bun @google/gemini-cli
 
 ---
 
-## 5. Python (pyenv + pipenv)
+## 6. Python (pyenv + pipenv)
 
 ```bash
 sudo apt update
@@ -133,7 +192,7 @@ pyenv versions
 
 ---
 
-## 6. Docker Engine (Instalação Oficial)
+## 7. Docker Engine (Instalação Oficial)
 
 Remoção de versões antigas e instalação limpa.
 
@@ -157,9 +216,9 @@ INNEREOF
 
 ---
 
-## 7. Aplicativos Desktop (APT / Deb / Snap / Flatpak)
+## 8. Aplicativos Desktop (APT / Deb / Snap / Flatpak)
 
-### 7.1 Navegadores & Essenciais
+### 8.1 Navegadores & Essenciais
 
 ```bash
 # Google Chrome
@@ -174,7 +233,7 @@ sudo curl -o microsoft-edge-stable.deb https://packages.microsoft.com/repos/edge
 sudo apt install -y ./microsoft-edge-stable.deb
 ```
 
-### 7.2 Snap
+### 8.2 Snap
 
 ```bash
 sudo apt install -y snapd
@@ -191,7 +250,7 @@ sudo snap install dbeaver-ce
 sudo snap install bitwarden
 ```
 
-### 7.3 Flatpak (Flathub)
+### 8.3 Flatpak (Flathub)
 
 ```bash
 sudo apt install -y flatpak gnome-software-plugin-flatpak
@@ -205,7 +264,7 @@ flatpak install flathub -y --noninteractive com.rtosta.zapzap
 flatpak install flathub -y --noninteractive org.onlyoffice.desktopeditors
 ```
 
-### 7.4 OBS Studio (PPA)
+### 8.4 OBS Studio (PPA)
 
 ```bash
 sudo add-apt-repository -y ppa:obsproject/obs-studio
@@ -215,7 +274,7 @@ sudo apt install -y ffmpeg obs-studio
 
 ---
 
-## 8. Teleport (CLI)
+## 9. Teleport (CLI)
 
 ```bash
 curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
@@ -223,7 +282,7 @@ curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
 
 ---
 
-## 9. Aumentar Swap (Exemplo 19G) (Opcional)
+## 10. Aumentar Swap (Exemplo 19G) (Opcional)
 
 ```bash
 sudo swapoff /swapfile || true
@@ -238,7 +297,7 @@ free -h
 
 ---
 
-## 10. Correção Tecla Ç (Internacional) (.XCompose)
+## 11. Correção Tecla Ç (Internacional) (.XCompose)
 
 ```bash
 cat <<'EOF' > ~/.XCompose
@@ -252,7 +311,7 @@ EOF
 
 ---
 
-## 11. Android / React Native (Java 17 + Watchman)
+## 12. Android / React Native (Java 17 + Watchman)
 
 ```bash
 sudo apt update
@@ -273,7 +332,7 @@ source ~/.zshrc
 # Instale SDK Android manualmente ou via Android Studio (Snap acima)
 ```
 
-### 11.1 Aliases Úteis (Opcional)
+### 12.1 Aliases Úteis (Opcional)
 
 ```bash
 # Adicionar aliases gerais e de React Native se ainda não presentes
@@ -301,7 +360,7 @@ EOF
 source ~/.zshrc
 ```
 
-### 11.2 Aumentar limites do inotify (solução imediata)
+### 12.2 Aumentar limites do inotify (solução imediata)
 
 Necessário para projetos com muitos arquivos (React Native, monorepos, Webpack, Watchman). Evita erros: "ENOSPC: System limit for number of file watchers reached".
 
@@ -327,7 +386,7 @@ sudo sysctl --system
 
 ---
 
-## 12. Extensões GNOME (Links)
+## 13. Extensões GNOME (Links)
 
 Acesse no navegador e instale:
 
@@ -339,7 +398,7 @@ Acesse no navegador e instale:
 
 ---
 
-## 13. GRUB (Ordem de Boot) (Opcional)
+## 14. GRUB (Ordem de Boot) (Opcional)
 
 ```bash
 sudo cp /etc/default/grub /etc/default/grub.bak
@@ -350,7 +409,7 @@ sudo update-grub
 
 ---
 
-## 14. Modo Gráfico: Forçar Xorg (Desabilitar Wayland) (Opcional)
+## 15. Modo Gráfico: Forçar Xorg (Desabilitar Wayland) (Opcional)
 
 ```bash
 sudo cp /etc/gdm3/custom.conf /etc/gdm3/custom.conf.bak
@@ -361,7 +420,7 @@ sudo systemctl restart gdm3  # (vai encerrar a sessão)
 
 ---
 
-## 15. Gestos no X11 (touchegg) (Opcional)
+## 16. Gestos no X11 (touchegg) (Opcional)
 
 ```bash
 sudo add-apt-repository -y ppa:touchegg/stable
@@ -372,7 +431,7 @@ systemctl status touchegg --no-pager
 
 ---
 
-## 16. Variáveis de Ambiente / Tokens (Exemplo GitHub Packages)
+## 17. Variáveis de Ambiente / Tokens (Exemplo GitHub Packages)
 
 ```bash
 echo 'export GITHUB_TOKEN="seu_token_aqui"' >> ~/.zshrc
@@ -381,7 +440,7 @@ source ~/.zshrc
 
 ---
 
-## 17. Pós-Instalação / Verificações Rápidas
+## 18. Pós-Instalação / Verificações Rápidas
 
 ```bash
 zsh --version
