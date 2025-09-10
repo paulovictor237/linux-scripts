@@ -104,6 +104,13 @@ curl -fsSL https://raw.githubusercontent.com/catppuccin/starship/refs/heads/main
 # Tema Catppuccin GNOME Terminal
 curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v1.0.0/install.py | python3 - || true
 
+## (Kubuntu/KDE) Tema Catppuccin para Konsole
+# Apenas para Kubuntu/KDE. Instala e aplica os esquemas de cores Catppuccin no Konsole.
+git clone --depth=1 https://github.com/catppuccin/konsole.git && \
+mkdir -p ~/.local/share/konsole && \
+cp konsole/themes/*.colorscheme ~/.local/share/konsole/ && \
+rm -rf konsole
+
 echo "Catppuccin + Starship instalados. Agora instale as fontes na seção 4.2."
 ```
 
