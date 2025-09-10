@@ -241,8 +241,6 @@ free -h
 ## 10. Correção Tecla Ç (Internacional) (.XCompose)
 
 ```bash
-cp ./linux/.XCompose ~/
-# OU gerar diretamente:
 cat <<'EOF' > ~/.XCompose
 include "%S/en_US.UTF-8/Compose"
 <dead_acute> <C> : "Ç"
