@@ -274,9 +274,10 @@ flatpak install flathub -y --noninteractive org.onlyoffice.desktopeditors
 ### 8.4 OBS Studio (PPA)
 
 ```bash
-sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo apt update
-sudo apt install -y ffmpeg obs-studio
+sudo apt install -y ffmpeg
+flatpak install flathub -y --noninteractive com.obsproject.Studio
+# Definir o codificador de vídeo para Software x264 no OBS via linha de comando
 ```
 
 ---
