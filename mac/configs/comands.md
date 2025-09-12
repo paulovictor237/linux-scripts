@@ -6,6 +6,7 @@ Cmd + Q Sair app
 Cmd + W Fechar janela/aba
 Cmd + M Minimizar
 Ctrl + Cmd + F Tela cheia
+Fn + F Tela cheia (novo atalho)
 Cmd + Opt + D Mostrar/ocultar Dock
 
 ### Edição
