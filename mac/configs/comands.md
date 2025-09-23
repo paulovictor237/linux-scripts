@@ -21,6 +21,7 @@ Cmd + Z / Cmd + Shift + Z Desfazer / Refazer
 Cmd + Espaço Spotlight
 Cmd + Shift + G Ir para pasta (Finder)
 Cmd + Shift + 5 Captura / Gravação tela
+Cmd + Opt + Esc Forçar encerramento de apps
 Ctrl + Cmd + Espaço Emojis
 Ctrl + Espaço Trocar idioma teclado
 F4 (Fn + F4) Launchpad
