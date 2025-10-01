@@ -147,7 +147,7 @@ brew install --cask microsoft-edge google-chrome arc
 brew install --cask whatsapp slack
 
 # Launcher & Tweaks
-brew install --cask raycast scroll-reverser middleclick kap smoothscroll
+brew install --cask raycast scroll-reverser middleclick kap smoothscroll linearmouse
 
 # Design & Notas
 brew install --cask figma obsidian spotify typora
