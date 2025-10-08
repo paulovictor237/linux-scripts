@@ -255,6 +255,7 @@ sudo snap install insomnia
 sudo snap install beekeeper-studio
 sudo snap install dbeaver-ce
 sudo snap install bitwarden
+sudo snap install kooha
 ```
 
 ### 8.3 Flatpak (Flathub)
@@ -263,7 +264,6 @@ sudo snap install bitwarden
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub -y --noninteractive com.stremio.Stremio
-flatpak install flathub -y --noninteractive com.uploadedlobster.peek
 flatpak install flathub -y --noninteractive io.beekeeperstudio.Studio
 flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 flatpak install flathub -y --noninteractive org.flameshot.Flameshot
