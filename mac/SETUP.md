@@ -144,7 +144,7 @@ docker context ls
 brew install --cask microsoft-edge google-chrome arc
 
 # Comunicação
-brew install --cask whatsapp slack
+brew install --cask whatsapp slack discord
 
 # Launcher & Tweaks
 brew install --cask raycast scroll-reverser middleclick kap smoothscroll linearmouse
