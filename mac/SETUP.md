@@ -144,7 +144,10 @@ docker context ls
 brew install --cask microsoft-edge google-chrome arc
 
 # Comunicação
-brew install --cask whatsapp slack discord
+brew install --cask whatsapp slack discord microsoft-teams
+
+# Terminais
+brew install --cask iterm2 ghostty
 
 # Launcher & Tweaks
 brew install --cask raycast scroll-reverser middleclick kap smoothscroll linearmouse
@@ -152,8 +155,14 @@ brew install --cask raycast scroll-reverser middleclick kap smoothscroll linearm
 # Design & Notas
 brew install --cask figma obsidian spotify typora
 
+# Produtividade & Tarefas
+brew install --cask ticktick
+
+# AI & Assistentes
+brew install --cask chatgpt
+
 # IDEs & Dev
-brew install --cask visual-studio-code android-studio
+brew install --cask visual-studio-code android-studio xcode
 
 # API Clients
 brew install --cask postman insomnia bruno
@@ -161,7 +170,7 @@ brew install --cask postman insomnia bruno
 # Banco de Dados
 brew install --cask beekeeper-studio dbeaver-community
 
-# Segurança
+# Utilitários & Limpeza
 brew install --cask bitwarden appcleaner
 
 # Multimídia & Produtividade
@@ -174,7 +183,10 @@ brew install --cask aldente
 brew install --cask steam
 ```
 
-🔗 Outra opção de navegador: [Zen Browser](https://zen-browser.app/download/) (não disponível via Homebrew).
+🔗 Outros navegadores:
+
+- [Zen Browser](https://zen-browser.app/download/) (instalado manualmente)
+- Dia (aplicativo instalado)
 
 ---
 
