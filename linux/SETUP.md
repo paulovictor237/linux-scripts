@@ -284,6 +284,8 @@ flatpak install flathub -y --noninteractive com.obsproject.Studio
 
 ## 9. Teleport (CLI)
 
+https://goteleport.com/download/all-downloads/?version=16.4.15
+
 ```bash
 curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
 ```
