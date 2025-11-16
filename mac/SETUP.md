@@ -151,6 +151,7 @@ brew install --cask iterm2 ghostty
 
 # Launcher & Tweaks
 brew install --cask raycast scroll-reverser middleclick kap smoothscroll linearmouse
+brew install --cask --no-quarantine middleclick
 
 # Design & Notas
 brew install --cask figma obsidian spotify typora
