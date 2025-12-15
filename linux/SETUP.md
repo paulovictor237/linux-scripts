@@ -326,6 +326,14 @@ EOF
 ```bash
 sudo apt update
 sudo apt install -y openjdk-17-jdk watchman
+
+# Instalação QEMU/KVM e Libvirt (para virtualização Android)
+sudo apt update
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo usermod -aG kvm $USER
+kvm-ok
+# Depois disso, reinicie o sistema.
+
 readlink -f $(which java)
 
 # Bloco Java / Android no ~/.zshrc (se ainda não existe)
