@@ -147,59 +147,42 @@ echo "Fonts instaladas. Ajuste no terminal/VS Code para 'FiraCode Nerd Font' ou 
 
 ---
 
-## 5. Node.js (NVM) + Ferramentas Globais
+## 5. Mise (Node, Java, Python e mais)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+# Instalação
+curl https://mise.run | sh
 
-# Bloco NVM no ~/.zshrc (se ainda não existe)
-grep -q 'NVM_DIR' ~/.zshrc || cat <<'EOF' >> ~/.zshrc
-### >>> NVM <<<
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-### <<< FIM NVM >>>
+# Configuração no ~/.zshrc
+grep -q 'mise activate' ~/.zshrc || cat <<'EOF' >> ~/.zshrc
+### >>> MISE <<<
+eval "$(~/.local/bin/mise activate zsh)"
+### <<< FIM MISE >>>
 EOF
 
 source ~/.zshrc
-nvm install 20.12.2
-nvm alias default 20.12.2
-nvm use 20.12.2
-node -v
+
+# Instalar runtimes
+mise use -g node@22.18
+mise use -g python@3.10
+mise use -g java@17
+
+# Ferramentas globais Node
 npm i -g yarn bun @google/gemini-cli
-```
 
----
+# Python
+pip install --upgrade pip pipenv
 
-## 6. Python (pyenv + pipenv)
-
-```bash
-sudo apt update
-sudo apt install -y build-essential zlib1g-dev libffi-dev libssl-dev liblzma-dev libbz2-dev libreadline-dev libsqlite3-dev
-curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-
-# Bloco pyenv no ~/.zshrc (se ainda não existe)
-grep -q 'PYENV_ROOT' ~/.zshrc || cat <<'EOF' >> ~/.zshrc
-### >>> PYENV <<<
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-alias python="python3"
-### <<< FIM PYENV >>>
-EOF
-
-source ~/.zshrc
-pyenv install 3.10
-pyenv global 3.10
+# Verificar
+mise ls
+node -v
 python --version
-pip install --upgrade pip
-pip install pipenv
-pyenv versions
+java -version
 ```
 
 ---
 
-## 7. Docker Engine (Instalação Oficial)
+## 6. Docker Engine (Instalação Oficial)
 
 Remoção de versões antigas e instalação limpa.
 
@@ -223,9 +206,9 @@ INNEREOF
 
 ---
 
-## 8. Aplicativos Desktop (APT / Deb / Snap / Flatpak)
+## 7. Aplicativos Desktop (APT / Deb / Snap / Flatpak)
 
-### 8.1 Navegadores & Essenciais
+### 7.1 Navegadores & Essenciais
 
 ```bash
 # Google Chrome
@@ -240,7 +223,7 @@ sudo curl -o microsoft-edge-stable.deb https://packages.microsoft.com/repos/edge
 sudo apt install -y ./microsoft-edge-stable.deb
 ```
 
-### 8.2 Snap
+### 7.2 Snap
 
 ```bash
 sudo apt install -y snapd
@@ -258,7 +241,7 @@ sudo snap install bitwarden
 sudo snap install kooha
 ```
 
-### 8.3 Flatpak (Flathub)
+### 7.3 Flatpak (Flathub)
 
 ```bash
 sudo apt install -y flatpak gnome-software-plugin-flatpak
@@ -271,7 +254,7 @@ flatpak install flathub -y --noninteractive com.rtosta.zapzap
 flatpak install flathub -y --noninteractive org.onlyoffice.desktopeditors
 ```
 
-### 8.4 OBS Studio (PPA)
+### 7.4 OBS Studio (PPA)
 
 ```bash
 sudo apt update
@@ -282,7 +265,7 @@ flatpak install flathub -y --noninteractive com.obsproject.Studio
 
 ---
 
-## 9. Teleport (CLI)
+## 8. Teleport (CLI)
 
 https://goteleport.com/download/all-downloads/?version=16.4.15
 
@@ -292,7 +275,7 @@ curl https://goteleport.com/static/install-connect.sh | bash -s 16.4.15
 
 ---
 
-## 10. Aumentar Swap (Exemplo 19G) (Opcional)
+## 9. Aumentar Swap (Exemplo 19G) (Opcional)
 
 ```bash
 sudo swapoff /swapfile || true
@@ -307,7 +290,7 @@ free -h
 
 ---
 
-## 11. Correção Tecla Ç (Internacional) (.XCompose)
+## 10. Correção Tecla Ç (Internacional) (.XCompose)
 
 ```bash
 cat <<'EOF' > ~/.XCompose
@@ -321,11 +304,11 @@ EOF
 
 ---
 
-## 12. Android / React Native (Java 17 + Watchman)
+## 11. Android / React Native (Watchman + SDK)
 
 ```bash
 sudo apt update
-sudo apt install -y openjdk-17-jdk watchman
+sudo apt install -y watchman
 
 # Instalação QEMU/KVM e Libvirt (para virtualização Android)
 sudo apt update
@@ -334,23 +317,22 @@ sudo usermod -aG kvm $USER
 kvm-ok
 # Depois disso, reinicie o sistema.
 
-readlink -f $(which java)
 
-# Bloco Java / Android no ~/.zshrc (se ainda não existe)
+# Configuração Android no ~/.zshrc
 grep -q 'ANDROID_HOME' ~/.zshrc || cat <<'EOF' >> ~/.zshrc
-### >>> JAVA & ANDROID <<<
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+### >>> ANDROID <<<
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-### <<< FIM JAVA & ANDROID >>>
+### <<< FIM ANDROID >>>
 EOF
 
 source ~/.zshrc
-# Instale SDK Android manualmente ou via Android Studio (Snap acima)
+# Instale SDK Android via Android Studio (Snap acima)
+# Java gerenciado pelo mise (seção 5)
 ```
 
-### 12.1 Aliases Úteis (Opcional)
+### 11.1 Aliases Úteis (Opcional)
 
 ```bash
 # Adicionar aliases gerais e de React Native se ainda não presentes
@@ -378,7 +360,7 @@ EOF
 source ~/.zshrc
 ```
 
-### 12.2 Aumentar limites do inotify (solução imediata)
+### 11.2 Aumentar limites do inotify (solução imediata)
 
 Necessário para projetos com muitos arquivos (React Native, monorepos, Webpack, Watchman). Evita erros: "ENOSPC: System limit for number of file watchers reached".
 
@@ -404,7 +386,7 @@ sudo sysctl --system
 
 ---
 
-## 13. Extensões GNOME (Links)
+## 12. Extensões GNOME (Links)
 
 Acesse no navegador e instale:
 
@@ -416,7 +398,7 @@ Acesse no navegador e instale:
 
 ---
 
-## 14. GRUB (Ordem de Boot) (Opcional)
+## 13. GRUB (Ordem de Boot) (Opcional)
 
 ```bash
 sudo cp /etc/default/grub /etc/default/grub.bak
@@ -427,7 +409,7 @@ sudo update-grub
 
 ---
 
-## 15. Modo Gráfico: Forçar Xorg (Desabilitar Wayland) (Opcional)
+## 14. Modo Gráfico: Forçar Xorg (Desabilitar Wayland) (Opcional)
 
 ```bash
 sudo cp /etc/gdm3/custom.conf /etc/gdm3/custom.conf.bak
@@ -438,7 +420,7 @@ sudo systemctl restart gdm3  # (vai encerrar a sessão)
 
 ---
 
-## 16. Gestos no X11 (touchegg) (Opcional)
+## 15. Gestos no X11 (touchegg) (Opcional)
 
 ```bash
 sudo add-apt-repository -y ppa:touchegg/stable
@@ -449,7 +431,7 @@ systemctl status touchegg --no-pager
 
 ---
 
-## 17. Variáveis de Ambiente / Tokens (Exemplo GitHub Packages)
+## 16. Variáveis de Ambiente / Tokens (Exemplo GitHub Packages)
 
 ```bash
 echo 'export GITHUB_TOKEN="seu_token_aqui"' >> ~/.zshrc
@@ -458,14 +440,16 @@ source ~/.zshrc
 
 ---
 
-## 18. Pós-Instalação / Verificações Rápidas
+## 17. Pós-Instalação / Verificações Rápidas
 
 ```bash
 zsh --version
 which zsh
 git --version
+mise ls
 node -v
 python --version
+java -version
 docker run --rm hello-world
 code --version || echo "VS Code via Snap ainda não aberto uma vez"
 ```

@@ -109,16 +109,21 @@ echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 eval "$(mise activate zsh)"
 
 # Instalar runtimes
-mise use -g node@22
-node -v
-
-mise use -g java@17
-java -version
-
+mise use -g node@22.18
 mise use -g python@3.10
-python --version
+mise use -g java@17
 
+# Ferramentas globais Node
 npm i -g yarn bun @google/gemini-cli
+
+# Python
+pip install --upgrade pip pipenv
+
+# Verificar
+mise ls
+node -v
+python --version
+java -version
 ```
 
 ## Docker + Colima + Orbstack
