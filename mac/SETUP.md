@@ -19,7 +19,7 @@ brew cleanup
 ## Utilitários CLI
 
 ```bash
-brew install neofetch gh acli
+brew install neofetch gh acli watchman
 ```
 
 ---
