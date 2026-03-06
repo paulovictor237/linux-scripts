@@ -1,9 +1,10 @@
-# Guia macOS — Setup de Desenvolvimento
+# Guia macOS Sequoia 15.5 — Setup de Desenvolvimento
 
 ## Homebrew (gerenciador de pacotes)
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+source ~/.zshrc
 ```
 
 ## Atualizações & Ferramentas Apple
@@ -19,7 +20,7 @@ brew cleanup
 ## Utilitários CLI
 
 ```bash
-brew install neofetch gh acli
+brew install neofetch
 ```
 
 ---
@@ -55,7 +56,7 @@ ssh -T git@bitbucket.org
 
 ```bash
 # Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Zinit (gerenciador de plugins)
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
@@ -100,7 +101,7 @@ brew install --cask font-meslo-lg-nerd-font
 
 ---
 
-## Mise (Node, Python)
+## Mise (Node, Java, Python)
 
 ```bash
 brew install mise
@@ -108,14 +109,36 @@ echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 eval "$(mise activate zsh)"
 
 # Instalar runtimes
-mise use -g node@latest
-mise use -g python@latest
+mise use -g node@22.18
+mise use -g python@3.10
+mise use -g java@17
+
+# Ferramentas globais Node
+npm i -g yarn bun @google/gemini-cli
+
+# Python
+pip install --upgrade pip pipenv
 
 # Verificar
 mise ls
 node -v
 python --version
+java -version
 ```
+
+## Docker + Colima + Orbstack
+
+```bash
+brew install --cask orbstack
+# precisa abrir o programa antes de executar o hello
+docker run hello-world
+docker context ls
+```
+
+🔍 Verificações:
+
+- `docker context ls` → confirma se está usando o socket do Colima.
+- `colima status` → confirma que a VM do Colima está rodando.
 
 ---
 
@@ -126,29 +149,50 @@ python --version
 brew install --cask microsoft-edge google-chrome arc
 
 # Comunicação
-brew install --cask microsoft-teams
+brew install --cask whatsapp slack discord microsoft-teams
 
-# Docker
-brew install --cask orbstack
+# Terminais
+brew install --cask iterm2 ghostty
 
 # Launcher & Tweaks
-brew install --cask raycast scroll-reverser middleclick
+brew install --cask raycast scroll-reverser middleclick kap smoothscroll linearmouse
+brew install --cask --no-quarantine middleclick
 
-# Notas & Música
-brew install --cask obsidian spotify
+# Design & Notas
+brew install --cask figma obsidian spotify typora
+
+# Produtividade & Tarefas
+brew install --cask ticktick
+
+# AI & Assistentes
+brew install --cask chatgpt
+
+# IDEs & Dev
+brew install --cask visual-studio-code android-studio xcode
 
 # API Clients
-brew install --cask postman
+brew install --cask postman insomnia bruno
 
 # Banco de Dados
-brew install --cask datagrip
+brew install --cask beekeeper-studio dbeaver-community
 
 # Utilitários & Limpeza
-brew install --cask appcleaner
+brew install --cask bitwarden appcleaner
 
-# Teleport
-brew install --cask teleport-connect
+# Multimídia & Produtividade
+brew install --cask obs stremio homerow davinci-resolve
+
+# Bateria / Gestão (MacBooks)
+brew install --cask aldente
+
+# Games
+brew install --cask steam
 ```
+
+🔗 Outros navegadores:
+
+- [Zen Browser](https://zen-browser.app/download/) (instalado manualmente)
+- Dia (aplicativo instalado)
 
 ---
 

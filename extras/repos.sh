@@ -1,4 +1,12 @@
 for repo in \
+"git@github.com:paulovictor237/ponto-eletronico-senior.git" \
+"git@github.com:paulovictor237/linux-scripts.git" \
+"git@github.com:px-center/px-torre-core.git"
+do
+  git clone "$repo"
+done
+
+for repo in \
 "git@github.com:paulovictor237/BDD.git" \
 "git@github.com:paulovictor237/ponto-mais.git" \
 "git@github.com:paulovictor237/linux-scripts.git" \
@@ -13,3 +21,4 @@ for repo in \
 do
   git clone "$repo"
 done
+
