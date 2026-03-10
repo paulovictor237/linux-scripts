@@ -19,7 +19,8 @@ brew cleanup
 ## Utilitários CLI
 
 ```bash
-brew install neofetch gh acli watchman
+brew install neofetch gh acli watchman gemini-cli
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 ---
