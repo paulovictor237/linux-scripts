@@ -144,6 +144,9 @@ brew install --cask postman
 # Banco de Dados
 brew install --cask datagrip
 
+# Streaming & Gravação
+brew install --cask obs-studio
+
 # Utilitários & Limpeza
 brew install --cask appcleaner
 
