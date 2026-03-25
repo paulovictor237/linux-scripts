@@ -168,10 +168,13 @@ brew install --cask android-studio
 # Adicionar variáveis de ambiente ao ~/.zshrc
 cat >> ~/.zshrc <<'EOF'
 
-# React Native
+# Android SDK configuration
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 EOF
 source ~/.zshrc
 
