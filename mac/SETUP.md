@@ -156,6 +156,34 @@ brew install --cask teleport-connect
 
 ---
 
+## Android (Java Zulu 17 + Android Studio)
+
+```bash
+# Instalar JDK Zulu 17 via Homebrew
+brew install --cask zulu@17
+
+# Instalar Android Studio via Homebrew
+brew install --cask android-studio
+
+# Adicionar variáveis de ambiente ao ~/.zshrc
+cat >> ~/.zshrc <<'EOF'
+
+# React Native
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH
+EOF
+source ~/.zshrc
+
+# Verificar
+java -version
+```
+
+> Ou baixe o Android Studio diretamente pelo site oficial:
+> 🔗 [https://developer.android.com/studio?hl=pt-br](https://developer.android.com/studio?hl=pt-br)
+
+---
+
 ## Variáveis de Ambiente (GitHub Packages, etc.)
 
 ```bash
