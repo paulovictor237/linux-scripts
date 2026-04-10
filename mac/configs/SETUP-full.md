@@ -168,7 +168,7 @@ brew install --cask ticktick
 brew install --cask chatgpt
 
 # IDEs & Dev
-brew install --cask visual-studio-code android-studio xcode
+brew install --cask visual-studio-code android-studio xcode zed
 
 # API Clients
 brew install --cask postman insomnia bruno

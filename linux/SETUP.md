@@ -223,7 +223,13 @@ sudo curl -o microsoft-edge-stable.deb https://packages.microsoft.com/repos/edge
 sudo apt install -y ./microsoft-edge-stable.deb
 ```
 
-### 7.2 Snap
+### 7.2 Zed Editor
+
+```bash
+curl -f https://zed.dev/install.sh | sh
+```
+
+### 7.3 Snap
 
 ```bash
 sudo apt install -y snapd
@@ -241,7 +247,7 @@ sudo snap install bitwarden
 sudo snap install kooha
 ```
 
-### 7.3 Flatpak (Flathub)
+### 7.4 Flatpak (Flathub)
 
 ```bash
 sudo apt install -y flatpak gnome-software-plugin-flatpak
@@ -254,7 +260,7 @@ flatpak install flathub -y --noninteractive com.rtosta.zapzap
 flatpak install flathub -y --noninteractive org.onlyoffice.desktopeditors
 ```
 
-### 7.4 OBS Studio (PPA)
+### 7.5 OBS Studio (PPA)
 
 ```bash
 sudo apt update
