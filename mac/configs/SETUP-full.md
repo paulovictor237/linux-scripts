@@ -168,8 +168,20 @@ brew install --cask ticktick
 brew install --cask chatgpt
 
 # IDEs & Dev
-brew install --cask visual-studio-code android-studio xcode zed
+brew install --cask visual-studio-code android-studio zed
+```
 
+**VS Code** — habilitar `code` no zsh:
+1. Abra o VS Code → **Cmd + Shift + P** → `Shell Command: Install 'code' command in PATH`
+2. Reinicie o terminal
+
+**Zed** — habilitar `zed` no zsh (caso `brew` não registre automaticamente):
+```bash
+echo 'alias zed="/Applications/Zed.app/Contents/MacOS/zed"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+```bash
 # API Clients
 brew install --cask postman insomnia bruno
 

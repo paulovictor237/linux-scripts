@@ -87,6 +87,7 @@ sudo apt install copyq -y
 # snap packages
 sudo apt install snapd -y
 sudo snap install code --classic
+echo 'export PATH="/snap/bin:$PATH"' >> ~/.zshrc
 sudo snap install android-studio --classic
 sudo snap install obsidian --classic
 sudo snap install slack spotify emote postman insomnia beekeeper-studio dbeaver-ce bitwarden
@@ -103,6 +104,10 @@ flatpak install flathub -y --noninteractive io.dbeaver.DBeaverCommunity
 flatpak install flathub -y --noninteractive org.flameshot.Flameshot
 flatpak install flathub -y --noninteractive com.rtosta.zapzap
 flatpak install flathub -y --noninteractive org.onlyoffice.desktopeditors
+
+# zed
+curl -f https://zed.dev/install.sh | sh
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 
 # install obs
 sudo add-apt-repository ppa:obsproject/obs-studio

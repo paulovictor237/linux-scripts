@@ -101,7 +101,7 @@ brew install --cask font-meslo-lg-nerd-font
 
 ---
 
-## Mise (Node, Python)
+## Mise (Node, Python, Java)
 
 ```bash
 brew install mise
@@ -111,11 +111,13 @@ eval "$(mise activate zsh)"
 # Instalar runtimes
 mise use -g node@latest
 mise use -g python@latest
+mise use -g java@17
 
 # Verificar
 mise ls
 node -v
 python --version
+java -version
 ```
 
 ---
@@ -152,6 +154,9 @@ brew install --cask appcleaner
 
 # Teleport
 brew install --cask teleport-connect
+
+# IDEs & Dev
+brew install --cask visual-studio-code zed
 ```
 
 ---
@@ -160,7 +165,8 @@ brew install --cask teleport-connect
 
 ```bash
 # Instalar JDK Zulu 17 via Homebrew
-brew install --cask zulu@17
+# brew install --cask zulu@17 # ja instalado no mise
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # Instalar Android Studio via Homebrew
 brew install --cask android-studio
@@ -169,7 +175,7 @@ brew install --cask android-studio
 cat >> ~/.zshrc <<'EOF'
 
 # Android SDK configuration
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export JAVA_HOME=$(mise where java@17)
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
