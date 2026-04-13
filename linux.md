@@ -182,26 +182,15 @@ java -version
 
 ---
 
-## 6. Docker Engine (Instalação Oficial)
-
-Remoção de versões antigas e instalação limpa.
+## 6. Docker Desktop (Instalação Oficial)
 
 ```bash
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove -y $pkg || true; done
-sudo apt update
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo groupadd docker || true
-sudo usermod -aG docker $USER
-newgrp docker <<'INNEREOF'
-docker run hello-world
-docker version
-docker compose version || docker-compose version || true
-INNEREOF
+sudo apt install gnome-terminal
+sudo apt-get update
+wget https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
+sudo apt install ./docker-desktop-amd64.deb
+systemctl --user start docker-desktop
+systemctl --user enable docker-desktop
 ```
 
 ---
