@@ -186,7 +186,7 @@ brew install --cask beekeeper-studio
 # Streaming & Gravação
 brew install --cask obs-studio
 # Utilitários & Limpeza
-brew install --cask appcleaner
+brew install --cask pearcleaner appcleaner
 # Teleport
 brew install --cask teleport-connect
 ```
