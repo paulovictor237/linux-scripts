@@ -179,6 +179,8 @@ brew install --cask orbstack
 brew install --cask raycast scroll-reverser middleclick
 # Notas & Música
 brew install --cask obsidian spotify
+# Produtividade
+brew install --cask ticktick
 # API Clients
 brew install --cask postman
 # Banco de Dados
