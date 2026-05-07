@@ -192,6 +192,9 @@ brew install mole
 brew install --cask pearcleaner appcleaner
 # Teleport
 brew install --cask teleport-connect
+
+# Vídeo
+brew install --cask losslesscut shutter-encoder vlc
 ```
 
 ---
