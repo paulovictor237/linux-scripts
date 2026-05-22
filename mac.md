@@ -202,7 +202,7 @@ brew install --cask losslesscut shutter-encoder vlc
 ## Utilitários CLI
 
 ```bash
-brew install neofetch gh acli gemini-cli
+brew install neofetch gh acli gemini-cli lazygit
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
