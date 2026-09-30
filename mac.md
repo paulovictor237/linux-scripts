@@ -146,10 +146,7 @@ brew install --cask middleclick
 # Notas & Música
 brew install --cask obsidian
 brew install --cask spotify
-# Produtividade
-brew install --cask ticktick
-brew install --cask handy
-# IA
+# IA Aplicativos
 brew install --cask claude
 brew install --cask chatgpt
 brew install --cask codex-app
@@ -162,7 +159,8 @@ brew install --cask beekeeper-studio
 brew install mole
 # Teleport
 brew install --cask teleport-connect
-
+# Produtividade
+brew install --cask handy
 # Vídeo
 brew install --cask obs-studio
 brew install --cask losslesscut
