@@ -104,6 +104,96 @@ mise ls
 
 ---
 
+## Utilitários CLI
+
+```bash
+brew install gh
+brew install acli
+brew install opencode
+brew install --cask claude-code
+brew install --cask codex
+brew install --cask antigravity-cli
+```
+
+---
+
+## Editors & Apps de Trabalho (Homebrew Casks)
+
+```bash
+# Editors
+brew install --cask zed
+brew install --cask stablyai/orca/orca
+brew install --cask visual-studio-code
+
+# VS Code: habilitar `code` no terminal
+# Cmd + Shift + P → "Shell Command: Install 'code' command in PATH"
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+
+# Navegadores
+brew install --cask microsoft-edge
+brew install --cask google-chrome
+brew install --cask arc
+# Comunicação
+brew install --cask microsoft-teams
+brew install --cask whatsapp
+# Docker
+brew install --cask orbstack
+# Launcher & Tweaks
+brew install --cask raycast
+brew install --cask scroll-reverser
+brew install --cask middleclick
+# Notas & Música
+brew install --cask obsidian
+brew install --cask spotify
+# Produtividade
+brew install --cask ticktick
+brew install --cask handy
+# IA
+brew install --cask claude
+brew install --cask chatgpt
+brew install --cask codex-app
+# API Clients
+brew install --cask postman
+brew install --cask bruno
+# Banco de Dados
+brew install --cask beekeeper-studio
+# Utilitários & Limpeza
+brew install mole
+# Teleport
+brew install --cask teleport-connect
+
+# Vídeo
+brew install --cask obs-studio
+brew install --cask losslesscut
+brew install --cask shutter-encoder
+brew install --cask vlc
+```
+
+---
+
+## Xcode 26.3 (Apple Silicon)
+
+> Baixe o `.xip` diretamente em [xcodereleases.com](https://xcodereleases.com/) — filtre por **Apple Silicon** e versão **26.3**.
+
+```bash
+# Após o download, extraia e mova para /Applications
+xip --expand Xcode_26.3.xip
+mv Xcode.app /Applications/
+
+# Aceitar licença e instalar componentes
+sudo xcodebuild -license accept
+xcodebuild -runFirstLaunch
+
+# Selecionar o Xcode correto
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+# Verificar
+xcodebuild -version
+```
+
+---
+
 ## Android Studio
 
 ```bash
@@ -133,77 +223,5 @@ java -version
 
 > Ou baixe o Android Studio diretamente pelo site oficial:
 > [https://developer.android.com/studio?hl=pt-br](https://developer.android.com/studio?hl=pt-br)
-
----
-
-## Xcode 26.3 (Apple Silicon)
-
-> Baixe o `.xip` diretamente em [xcodereleases.com](https://xcodereleases.com/) — filtre por **Apple Silicon** e versão **26.3**.
-
-```bash
-# Após o download, extraia e mova para /Applications
-xip --expand Xcode_26.3.xip
-mv Xcode.app /Applications/
-
-# Aceitar licença e instalar componentes
-sudo xcodebuild -license accept
-xcodebuild -runFirstLaunch
-
-# Selecionar o Xcode correto
-sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-
-# Verificar
-xcodebuild -version
-```
-
----
-
-## Editors & Apps de Trabalho (Homebrew Casks)
-
-```bash
-# Editors
-brew install --cask visual-studio-code zed
-
-# VS Code: habilitar `code` no terminal
-# Cmd + Shift + P → "Shell Command: Install 'code' command in PATH"
-
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-
-# Navegadores
-brew install --cask microsoft-edge google-chrome arc
-# Comunicação
-brew install --cask microsoft-teams whatsapp
-# Docker
-brew install --cask orbstack
-# Launcher & Tweaks
-brew install --cask raycast scroll-reverser middleclick
-# Notas & Música
-brew install --cask obsidian spotify
-# Produtividade
-brew install --cask ticktick
-# API Clients
-brew install --cask postman
-# Banco de Dados
-brew install --cask beekeeper-studio
-# Streaming & Gravação
-brew install --cask obs-studio
-# Utilitários & Limpeza
-brew install mole
-brew install --cask pearcleaner appcleaner
-# Teleport
-brew install --cask teleport-connect
-
-# Vídeo
-brew install --cask losslesscut shutter-encoder vlc
-```
-
----
-
-## Utilitários CLI
-
-```bash
-brew install neofetch gh acli gemini-cli lazygit
-curl -fsSL https://claude.ai/install.sh | bash
-```
 
 ---
