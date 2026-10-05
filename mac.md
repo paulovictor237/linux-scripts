@@ -138,6 +138,7 @@ brew install --cask arc
 brew install --cask microsoft-teams
 brew install --cask whatsapp
 # Docker
+brew install colima
 brew install --cask orbstack
 # Launcher & Tweaks
 brew install --cask raycast
