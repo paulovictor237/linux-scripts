@@ -139,6 +139,12 @@ brew install --cask microsoft-teams
 brew install --cask whatsapp
 # Docker
 brew install colima
+brew install docker
+brew install docker-compose
+brew install docker-buildx
+brew install docker-credential-helper
+# ~/.docker/config.json → "cliPluginsExtraDirs": ["/opt/homebrew/lib/docker/cli-plugins"]
+colima start --cpu 4 --memory 8 --disk 60 --vm-type vz --mount-type virtiofs
 brew install --cask orbstack
 # Launcher & Tweaks
 brew install --cask raycast
