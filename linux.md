@@ -228,8 +228,11 @@ sudo snap install obsidian --classic
 sudo snap install slack --classic
 sudo snap install spotify
 sudo snap install emote
-sudo snap install postman
-sudo snap install insomnia
+# API Clients — recomendado: Hoppscotch (https://hoppscotch.io/)
+# Use direto pelo navegador, sem instalar.
+# Alternativas desktop (opcional):
+# sudo snap install postman
+# sudo snap install insomnia
 sudo snap install beekeeper-studio
 sudo snap install dbeaver-ce
 sudo snap install bitwarden

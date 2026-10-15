@@ -157,9 +157,11 @@ brew install --cask spotify
 brew install --cask claude
 brew install --cask chatgpt
 brew install --cask codex-app
-# API Clients
-brew install --cask postman
-brew install --cask bruno
+# API Clients — recomendado: Hoppscotch (https://hoppscotch.io/)
+# Use direto pelo navegador, sem instalar.
+# Alternativas desktop (opcional):
+# brew install --cask postman
+# brew install --cask bruno
 # Banco de Dados
 brew install --cask beekeeper-studio
 # Utilitários & Limpeza
