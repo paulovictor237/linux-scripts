@@ -1,4 +1,4 @@
-# Ubuntu Development Environment Setup Script
+# Ubuntu Development Environment Setup Script PEVE
 
 This repository contains a set of shell scripts to configure and customize an Ubuntu development environment for software development. The scripts automate the installation of commonly used software packages, tools, extensions, and configurations required for a smooth and efficient development experience.
 
