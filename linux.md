@@ -1,4 +1,4 @@
-# Guia Linux Ubuntu 24.04+ — Setup de Desenvolvimento
+# Guia Linux Ubuntu 26.04.1 — Setup de Desenvolvimento
 
 > Copie e cole bloco a bloco. Ajuste conforme necessidade. Execute tudo em um terminal Zsh (ou Bash) com privilégios adequados.
 >
